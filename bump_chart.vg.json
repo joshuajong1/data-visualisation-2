@@ -1,0 +1,72 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": {
+        "text": "Doses per 100 People from June 2021 to August 2021",
+        "color": "#527298",
+        "fontSize": 17
+    },
+    "data": {
+        "url": "data/global-vaccine-per-capita.csv"
+    },
+    "mark": {
+        "type": "line",
+        "tooltip": {
+            "content": "data"
+        },
+        "orient": "vertical",
+        "point": true
+    },
+    "encoding": {
+        "y": {
+            "field": "Rank",
+            "type": "ordinal"
+        },
+        "x": {
+            "field": "Date",
+            "sort": [
+                "Jun",
+                "Jul",
+                "Aug"
+            ],
+            "axis": {
+                "labelAngle": "-45"
+            }
+        },
+        "color": {
+            "field": "Country",
+            "scale": {
+                "range": [
+                    "#668FFF",
+                    "#FF99BB",
+                    "#FFC800",
+                    "#FE5A50"
+                ]
+            }
+        }
+    },
+    "config": {
+        "background": "lightgray",
+        "axis": {
+            "titleColor": "#527298",
+            "labelColor": "#527298",
+            "labelFont": "sans-serif",
+            "labelFontSize": 15,
+            "titleFontSize": 15
+        },
+        "view": {
+            "stroke": "transparent"
+        },
+        "legend": {
+            "labelFontSize": 15,
+            "titleFontSize": 15,
+            "titleAlign": "left",
+            "orient": "none",
+            "legendX": 400,
+            "legendY": 20,
+            "labelColor": "#527298",
+            "titleColor": "#527298"
+        }
+    },
+    "width": 400,
+    "height": 250
+}
