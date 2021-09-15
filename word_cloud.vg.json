@@ -1,0 +1,101 @@
+{
+    "$schema": "https://vega.github.io/schema/vega/v5.json",
+    "width": 100,
+    "height": 325,
+    "title": {
+        "text": "Malaysia's Vaccine Portfolio",
+        "color": "#527298",
+        "fontSize": 17
+    },
+  
+    "data": [
+      {
+        "name": "table",
+        "values": [
+          "Pfizer Pfizer Pfizer Pfizer Pfizer AstraZeneca CoVax Sinovac Sinovac Sputnik-V CanSino"
+        ],
+        "transform": [
+          {
+            "type": "countpattern",
+            "field": "data",
+            "case": "mixed",
+            "pattern": "[\\w'-]{3,}"
+          },
+          {
+              "type": "formula", "as": "url",
+              "expr": "'https://www.google.com/search?q=' + datum.text + ' vaccine'" 
+          },
+          {
+            "type": "formula", "as": "pop_coverage",
+            "expr": "datum.count/10 * 100"
+          },
+          {
+            "type": "formula", "as": "pop_raw_val",
+            "expr": "datum.count/10 * 64"
+          }
+        ]
+      }
+    ],
+  
+    "scales": [
+      {
+        "name": "color",
+        "type": "ordinal",
+        "domain": {"data": "table", "field": "text"},
+        "range": ["#d5a928", "#652c90", "green", "black",
+        "#FE5A50", "#668FFF"]
+      }
+    ],
+  
+    "marks": [
+      {
+        "type": "text",
+        "from": {"data": "table"},
+        "encode": {
+          "enter": {
+            "text": {"field": "text"},
+            "align": {"value": "center"},
+            "baseline": {"value": "alphabetic"},
+            "fill": {"scale": "color", "field": "text"},
+            "tooltip": { 
+                "signal": "'Population coverage: ' + datum.pop_coverage + '%' + '; Number of doses: ' + datum.pop_raw_val + ' million' "
+            },
+            "href": {"field": "url", "type": "nominal"}
+          },
+          "update": {
+            "fillOpacity": {"value": 1}
+          },
+          "hover": {
+            "fillOpacity": {"value": 0.5}
+          }
+        },
+        "transform": [
+          {
+            "type": "wordcloud",
+            "size": [800, 400],
+            "text": {"field": "text"},
+            "rotate": {"field": "datum.angle"},
+            "font": "Helvetica Neue",
+            "fontSize": {"field": "datum.count"},
+            "fontWeight": "bold",
+            "fontSizeRange": [20, 60],
+            "padding": 10
+          }
+        ]
+      }
+    ],
+    "config": {
+        "background": "lightgray",
+        "axis": {
+            "titleColor": "#527298",
+            "labelColor": "#527298",
+            "labelFont": "sans-serif",
+            "labelFontSize": 15,
+            "titleFontSize": 15
+        },
+        "view": {
+            "stroke": "black"
+        }
+    }
+  }
+  
