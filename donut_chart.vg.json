@@ -1,0 +1,58 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": {
+        "text": "Malaysia's Covid-19 Vaccine Portfolio",
+        "color": "#527298",
+        "fontSize": 20,
+        "font": "Arial",
+        "offset": 30,
+        "align": "center"
+    },
+    "width": 400,
+    "data": 
+    {
+        "name": "table",
+        "values": [
+            {"Vaccine": "Pfizer", "Population Covered": 0.5, "Doses Purchased": "32 million", "Population Coverage": "50%"},
+            {"Vaccine": "AstraZeneca", "Population Covered": 0.1, "Doses Purchased": "6.4 million", "Population Coverage": "10%"},
+            {"Vaccine": "Sinovac", "Population Covered": 0.1875, "Doses Purchased": "12 million", "Population Coverage": "18.75%"},
+            {"Vaccine": "CanSino", "Population Covered": 0.109, "Doses Purchased": "3.5 million", "Population Coverage": "10.9%"},
+            {"Vaccine": "Sputnik V", "Population Covered": 0.1, "Doses Purchased": "6.4 million", "Population Coverage": "10%"},
+            {"Vaccine": "CoVax", "Population Covered": 0.1, "Doses Purchased": "6.4 million", "Population Coverage": "10%"}
+        ]
+    },
+    "transform": [
+        {"calculate": "'https://www.google.com/search?q=' + datum.Vaccine + ' vaccine'", "as": "url"}
+    ],
+    "mark": {
+        "type": "arc", 
+        "innerRadius": 90,
+        "tooltip": {"content": "data"},
+        "outerRadius": 130,
+        "x": 200
+    },
+    "encoding": {
+        "color": {"field": "Vaccine", "type": "nominal"},
+        "theta": {"field": "Population Covered", "type": "quantitative"},
+        "tooltip": [
+            {"field": "Vaccine", "type": "nominal"},
+            {"field": "Population Coverage", "type": "nominal"},
+            {"field": "Doses Purchased", "type": "nominal"}
+        ],
+        "href": {"field": "url", "type": "nominal"},
+        "text": {"field": "Vaccine", "type": "nominal"}
+    },
+    "config": {
+        "background": "lightgrey",
+        "view": {
+            "stroke": "transparent"
+        },
+        "legend": {
+            "legendX": 250,
+            "legendY": 100,
+            "labelFontSize": 15,
+            "titleFontSize": 15
+        }
+
+    }
+  }

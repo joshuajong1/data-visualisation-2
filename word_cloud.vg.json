@@ -2,11 +2,6 @@
     "$schema": "https://vega.github.io/schema/vega/v5.json",
     "width": 100,
     "height": 325,
-    "title": {
-        "text": "Malaysia's Vaccine Portfolio",
-        "color": "#527298",
-        "fontSize": 17
-    },
   
     "data": [
       {
@@ -32,6 +27,10 @@
           {
             "type": "formula", "as": "pop_raw_val",
             "expr": "datum.count/10 * 64"
+          },
+          {
+            "type": "formula", "as": "angle",
+            "expr": "[0, 0, 0][~~(random() * 3)]"
           }
         ]
       }
@@ -75,11 +74,11 @@
             "size": [800, 400],
             "text": {"field": "text"},
             "rotate": {"field": "datum.angle"},
-            "font": "Helvetica Neue",
+            "font": "Arial",
             "fontSize": {"field": "datum.count"},
             "fontWeight": "bold",
-            "fontSizeRange": [20, 60],
-            "padding": 10
+            "fontSizeRange": [30, 80],
+            "padding": 20
           }
         ]
       }

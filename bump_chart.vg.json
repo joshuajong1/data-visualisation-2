@@ -3,7 +3,8 @@
     "title": {
         "text": "Doses per 100 People from June 2021 to August 2021",
         "color": "#527298",
-        "fontSize": 17
+        "fontSize": 20,
+        "font": "Arial"
     },
     "data": {
         "url": "data/global-vaccine-per-capita.csv"
@@ -61,12 +62,12 @@
             "titleFontSize": 15,
             "titleAlign": "left",
             "orient": "none",
-            "legendX": 400,
+            "legendX": 450,
             "legendY": 20,
             "labelColor": "#527298",
             "titleColor": "#527298"
         }
     },
-    "width": 400,
+    "width": 450,
     "height": 250
 }

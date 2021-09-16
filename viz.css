@@ -36,44 +36,43 @@ h1 {
 
 h2 {
   font-size: 30px;
-  color: rgb(0, 0, 0);
   margin-left: 2%;
+  color: rgb(0, 0, 0);
 }
 
-.pure-u-1-3 {
-  margin-top: 1%;
-  height: 10%;
-  margin-bottom: 2%;
+.pure-u-3-8 {
+}
+
+.pure-u-2-5 {
+  margin-left: 2%;
 }
 
 #text_div {
-  margin-left: 30px;
-  margin-right: 10px;
-}
-
-.text_div_bump,
-.text_div_wordcl,
-.text_div_vacc_desc {
-  display: inline;
+  margin-left: 2%;
 }
 
 #bump_chart {
-  margin-left: 2%;
-  max-width: 35%;
-  margin-right: -3%;
-  border-style: solid;
+  width: 150%;
+  height: 90%;
 }
 
-#word_cloud {
-  margin-right: 0%;
-  max-width: 37%;
-  margin-left: 0%;
-  border-style: solid;
+#donut_chart {
+  width: 100%;
+  height: 100%;
 }
 
-#vacc_text {
-  margin-left: 1%;
-  max-width: 10%;
-  margin-right: 0%;
-  border-style: solid;
+#aligned {
+  margin-left: 80%;
+  padding-top: 20%;
+}
+
+#test {
+  margin-left: 50%;
+}
+
+#vaccine-text {
+  font-size: 30px;
+  color: teal;
+  font-weight: bold;
+  padding-right: 3%;
 }

@@ -1,0 +1,28 @@
+</div>
+
+    <div class="text_div_wordcl">
+        <div id="word_cloud"></div>
+    </div>
+
+    <div id="test"></div>
+    
+
+
+<div class="pure-u-2-5">
+            <div id="bump_chart"></div>
+        </div>
+        <div class="pure-u-3-8">
+            <div id="word_cloud"></div>
+        </div>
+        <div class="pure-u-1-8">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error eaque iste perspiciatis? Inventore, praesentium? Harum beatae recusandae quae, culpa sequi quos voluptates delectus id ex aperiam numquam natus quaerat. Nisi.</p>
+        </div>
+
+
+
+    "title": {
+        "text": "Malaysia's Covid-19 Vaccine Portfolio",
+        "color": "#527298",
+        "fontSize": 20,
+        "font": "Arial"
+    },
