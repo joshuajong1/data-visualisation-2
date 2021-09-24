@@ -1,0 +1,33 @@
+﻿Date,State,cumul_partial,cumul_full,population,% of Population,Status,StatusID
+31/08/2021,Johor,2137107,1296842,3781000,56.52,Partially Vaccinated,2
+31/08/2021,Kedah,1093514,707135,2185100,50.04,Partially Vaccinated,2
+31/08/2021,Kelantan,776389,559694,1906700,40.72,Partially Vaccinated,2
+31/08/2021,Melaka,545999,395793,932700,58.54,Partially Vaccinated,2
+31/08/2021,Negeri Sembilan,781329,642142,1128800,69.22,Partially Vaccinated,2
+31/08/2021,Pahang,756639,606500,1678700,45.07,Partially Vaccinated,2
+31/08/2021,Perak,1242573,889777,2510300,49.5,Partially Vaccinated,2
+31/08/2021,Perlis,157733,120432,254900,61.88,Partially Vaccinated,2
+31/08/2021,Penang,1151015,773772,1773600,64.9,Partially Vaccinated,2
+31/08/2021,Sabah,1629317,1102420,3908500,41.69,Partially Vaccinated,2
+31/08/2021,Sarawak,1852360,1778498,2816500,65.77,Partially Vaccinated,2
+31/08/2021,Selangor,4009866,3428231,6538000,61.33,Partially Vaccinated,2
+31/08/2021,Terengganu,670000,396579,1259300,53.2,Partially Vaccinated,2
+31/08/2021,Federal Territory of Kuala Lumpur,2741700,2153722,1773700,154.58,Partially Vaccinated,2
+31/08/2021,Federal Territory of Labuan,69913,64415,99600,70.19,Partially Vaccinated,2
+31/08/2021,Federal Territory of Putrajaya,126300,116349,110000,114.82,Partially Vaccinated,2
+31/08/2021,Johor,2137107,1296842,3781000,34.3,Fully Vaccinated,1
+31/08/2021,Kedah,1093514,707135,2185100,32.36,Fully Vaccinated,1
+31/08/2021,Kelantan,776389,559694,1906700,29.35,Fully Vaccinated,1
+31/08/2021,Melaka,545999,395793,932700,42.44,Fully Vaccinated,1
+31/08/2021,Negeri Sembilan,781329,642142,1128800,56.89,Fully Vaccinated,1
+31/08/2021,Pahang,756639,606500,1678700,36.13,Fully Vaccinated,1
+31/08/2021,Perak,1242573,889777,2510300,35.45,Fully Vaccinated,1
+31/08/2021,Perlis,157733,120432,254900,47.25,Fully Vaccinated,1
+31/08/2021,Penang,1151015,773772,1773600,43.63,Fully Vaccinated,1
+31/08/2021,Sabah,1629317,1102420,3908500,28.21,Fully Vaccinated,1
+31/08/2021,Sarawak,1852360,1778498,2816500,63.15,Fully Vaccinated,1
+31/08/2021,Selangor,4009866,3428231,6538000,52.44,Fully Vaccinated,1
+31/08/2021,Terengganu,670000,396579,1259300,31.49,Fully Vaccinated,1
+31/08/2021,Federal Territory of Kuala Lumpur,2741700,2153722,1773700,121.43,Fully Vaccinated,1
+31/08/2021,Federal Territory of Labuan,69913,64415,99600,64.67,Fully Vaccinated,1
+31/08/2021,Federal Territory of Putrajaya,126300,116349,110000,105.77,Fully Vaccinated,1

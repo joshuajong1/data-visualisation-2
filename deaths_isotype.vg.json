@@ -1,0 +1,53 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 800,
+    "height": 200,
+    "config": {
+        "view": {
+            "strokeWidth": 0,
+            "step": 15
+        },
+        "axis": {
+            "domain": false
+        },
+        "background": "lightgrey",
+        "mark": {
+            "stroke": "darkgrey"
+        }
+    },
+    "data": {
+      "url": "data/deaths_per_million.csv"
+    },
+    "mark": {"type": "point", "filled": true},
+    "encoding": {
+      "x": {"field": "Deaths per million", "type": "ordinal", "axis": null},
+      "y": {"field": "Species", "type": "ordinal", "axis": null},
+      "row": {"field": "Month", "header": {"title": ""}, "sort": ["June", "July", "August"]},
+      "shape": {
+        "field": "Species",
+        "type": "nominal",
+        "scale": {
+          "domain": ["person"],
+          "range": [
+            "M1.7 -1.7h-0.8c0.3 -0.2 0.6 -0.5 0.6 -0.9c0 -0.6 -0.4 -1 -1 -1c-0.6 0 -1 0.4 -1 1c0 0.4 0.2 0.7 0.6 0.9h-0.8c-0.4 0 -0.7 0.3 -0.7 0.6v1.9c0 0.3 0.3 0.6 0.6 0.6h0.2c0 0 0 0.1 0 0.1v1.9c0 0.3 0.2 0.6 0.3 0.6h1.3c0.2 0 0.3 -0.3 0.3 -0.6v-1.8c0 0 0 -0.1 0 -0.1h0.2c0.3 0 0.6 -0.3 0.6 -0.6v-2c0.2 -0.3 -0.1 -0.6 -0.4 -0.6z"
+                      ]
+        },
+        "legend": null
+      },
+      "color": {
+        "field": "Species",
+        "type": "nominal",
+        "legend": null,
+        "scale": {
+          "domain": ["person"],
+          "range": [
+            "black"
+          ]
+        }
+      },
+      "opacity": {"value": 1},
+      "size": {"value": 200}
+    }
+  }
+  
+  

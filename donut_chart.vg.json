@@ -26,9 +26,9 @@
     ],
     "mark": {
         "type": "arc", 
-        "innerRadius": 90,
+        "innerRadius": 80,
         "tooltip": {"content": "data"},
-        "outerRadius": 130,
+        "outerRadius": 120,
         "x": 200
     },
     "encoding": {
@@ -52,6 +52,10 @@
             "legendY": 100,
             "labelFontSize": 15,
             "titleFontSize": 15
+        },
+        "arc": {
+            "cornerRadius": 0,
+            "padAngle": 0.02
         }
 
     }

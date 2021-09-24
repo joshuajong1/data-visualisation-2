@@ -1,0 +1,78 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "data/testing-average-by-state.csv"
+  },
+  "width": 600,
+  "height": 500,
+  "params": [{
+    "name": "Test_selection",
+    "bind": {
+      "input": "select",
+      "options": [
+          "RTK-AG", "PCR", "Both"
+      ],
+      "labels": [
+        "RTK-AG", "PCR", "Show All"
+      ],
+      "name": "Type of Test: "
+    },
+    "value": "RTK-AG"
+    }
+  ],
+  "transform": [
+    {
+      "filter": "datum.Test_Kit == Test_selection"
+    }
+  ],
+  "mark": {
+    "type": "circle",
+    "opacity": 0.5,
+    "stroke": "black",
+    "strokeWidth": 1
+  },
+  "encoding": {
+    "x": {
+      "field": "Week",
+      "type": "nominal",
+      "axis": {
+        "labelFontSize": 12,
+        "grid": false,
+        "labelAngle": -45,
+        "titleFontSize": 0
+      }
+    },
+    "y": {
+      "field": "State",
+      "type": "nominal",
+      "axis": {
+        "title": "State",
+        "labelFontSize": 12,
+        "titleFontSize": 0
+      }
+    },
+    "size": {
+        "field": "Tests Conducted",
+        "type": "quantitative",
+        "legend": true,
+        "scale": {"range": [0, 3000]},
+        "legend": null
+    },
+    "tooltip": [
+      {"field": "State", "type": "nominal"},
+      {"field": "Tests Conducted", "type": "quantitative", "format": ","}    ]
+  },
+  "config": {
+    "background": "lightgray",
+    "axis": {
+      "grid": true,
+      "gridOpacity": 0.5,
+      "gridColor": "grey",
+      "domain": false,
+      "ticks": false
+    },
+    "view": {
+      "strokeOpacity": 0
+    }
+  }
+}

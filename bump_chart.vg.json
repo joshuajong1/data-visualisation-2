@@ -1,26 +1,43 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "title": {
-        "text": "Doses per 100 People from June 2021 to August 2021",
+        "text": "Doses per 100 People in Selected Countries",
         "color": "#527298",
         "fontSize": 20,
         "font": "Arial"
     },
     "data": {
-        "url": "data/global-vaccine-per-capita.csv"
+        "url": "data/10-countries-vaccine-per-capita.csv"
     },
+    "params": [{
+        "name": "Top_n",
+        "value": 10,
+        "bind": {
+            "input": "range", "min": 1, "max": 10, "step": 1,
+            "name": "Number of countries: "
+        }
+    }],
+    "transform": [{
+        "filter": "datum.Rank <= Top_n"
+    }],
     "mark": {
         "type": "line",
-        "tooltip": {
-            "content": "data"
-        },
         "orient": "vertical",
-        "point": true
+        "point": {
+            "shape": "circle",
+            "size": 50,
+            "opacity": 0.5
+        },
+        "interpolate": "natural",
+        "strokeWidth": 10,
+        "opacity": 0.5
     },
+
     "encoding": {
         "y": {
             "field": "Rank",
-            "type": "ordinal"
+            "type": "ordinal",
+            "sort": [1,2,3,4,5,6,7,8,9,10]
         },
         "x": {
             "field": "Date",
@@ -30,20 +47,18 @@
                 "Aug"
             ],
             "axis": {
-                "labelAngle": "-45"
+                "labelAngle": -45
             }
         },
         "color": {
-            "field": "Country",
-            "scale": {
-                "range": [
-                    "#668FFF",
-                    "#FF99BB",
-                    "#FFC800",
-                    "#FE5A50"
-                ]
-            }
-        }
+            "field": "ISO Country Code"
+        },
+        "tooltip": [
+            {"field": "Date"},
+            {"field": "Country"},
+            {"field": "ISO Country Code"},
+            {"field": "Doses per 100 people"}
+        ]
     },
     "config": {
         "background": "lightgray",
@@ -59,15 +74,15 @@
         },
         "legend": {
             "labelFontSize": 15,
-            "titleFontSize": 15,
+            "titleFontSize": 0,
             "titleAlign": "left",
             "orient": "none",
-            "legendX": 450,
+            "legendX": 700,
             "legendY": 20,
             "labelColor": "#527298",
             "titleColor": "#527298"
         }
     },
-    "width": 450,
-    "height": 250
+    "width": 700,
+    "height": 350
 }
