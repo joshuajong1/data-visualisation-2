@@ -1,0 +1,88 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {
+        "url": "data/icu_vent_usage.csv"
+    },
+    "height": 80,
+    "width": 700,
+    "title": "Daily ICU Usage",
+    "params": [{
+        "name": "State_selection",
+        "bind": {
+          "input": "select",
+          "options": [
+            "Johor", "Kedah",
+            "Kelantan", "Melaka",
+            "Negeri Sembilan", "Pahang",
+            "Penang", "Perak", "Perlis",
+            "Sabah", "Sarawak", "Selangor", 
+            "Terengganu", "W.P. Kuala Lumpur", 
+            "W.P. Labuan", "W.P. Putrajaya"
+          ],
+          "labels": [
+            "Johor", "Kedah",
+            "Kelantan", "Melaka",
+            "Negeri Sembilan", "Pahang",
+            "Penang", "Perak", "Perlis",
+            "Sabah", "Sarawak", "Selangor", 
+            "Terengganu", "W.P. Kuala Lumpur", 
+            "W.P. Labuan", "W.P. Putrajaya"
+          ],
+          "name": "Choose a State: "
+        },
+        "value": "Johor"
+        }
+    ],
+    "config": {
+        "view": {
+            "strokeWidth": 0,
+            "step": 15
+        },
+        "axis": {
+            "domain": false
+        },
+        "background": "lightgrey",
+        "mark": {
+            "stroke": "darkgrey"
+        }
+    },
+    "transform": [{
+        "filter": "datum.State == State_selection"
+    }],
+    "mark": "rect",
+    "encoding": {
+        "x": {
+            "field": "Date1",
+            "timeUnit": "date",
+            "type": "ordinal",
+            "title": "Day",
+            "axis": {
+                "labelAngle": 0,
+                "format": "%e"
+            }
+        },
+        "y": {
+            "field": "Date1",
+            "timeUnit": "month",
+            "type": "ordinal",
+            "title": "Month"
+        },
+        "color": {
+            "field": "icu_usage",
+            "aggregate": "max",
+            "type": "quantitative",
+            "legend": {
+                "title": null
+            },
+            "scale": {
+                "range": [
+                    "lightgrey", "black" 
+                ]
+            }
+        },
+        "tooltip": [
+            {"field": "Date", "type":"ordinal"},
+            {"field": "icu_usage"}
+        ]
+    }
+}

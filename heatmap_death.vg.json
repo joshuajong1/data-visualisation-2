@@ -1,0 +1,58 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {
+        "url": "data/total_deaths_malaysia-jun-to-aug.csv"
+    },
+    "height": 80,
+    "width": 700,
+    "title": "Daily Number of Deaths",
+    "config": {
+        "view": {
+            "strokeWidth": 0,
+            "step": 15
+        },
+        "axis": {
+            "domain": false
+        },
+        "background": "lightgrey",
+        "mark": {
+            "stroke": "darkgrey"
+        }
+    },
+    "mark": "rect",
+    "encoding": {
+        "x": {
+            "field": "Date1",
+            "timeUnit": "date",
+            "type": "ordinal",
+            "title": "Day",
+            "axis": {
+                "labelAngle": 0,
+                "format": "%e"
+            }
+        },
+        "y": {
+            "field": "Date1",
+            "timeUnit": "month",
+            "type": "ordinal",
+            "title": "Month"
+        },
+        "color": {
+            "field": "Deaths",
+            "aggregate": "max",
+            "type": "quantitative",
+            "legend": {
+                "title": null
+            },
+            "scale": {
+                "range": [
+                    "lightgrey", "black" 
+                ]
+            }
+        },
+        "tooltip": [
+            {"field": "Date", "type":"ordinal"},
+            {"field": "Deaths"}
+        ]
+    }
+}

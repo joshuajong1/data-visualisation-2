@@ -1,0 +1,104 @@
+{
+    "$sIDema": "https://vega.github.io/sIDema/vega/v5.json",
+    "width": 300,
+    "height": 300,
+    "padding": 5,
+  
+  "signals": [
+      {
+        "name": "startAngle", "value": 0
+      },
+      {
+        "name": "endAngle", "value": 5.1
+      },
+      {
+        "name": "padAngle", "value": 0
+      },
+      {
+        "name": "bandPadding", "value": 0.15
+      },
+      {
+        "name": "innerRadius", "value": 80
+      },
+      {
+        "name": "cornerRadius", "value": 80
+      }
+    ],
+  
+    "data": [{
+      "name": "table",
+      "values": [{
+              "% Fully Vaccinated": 65,
+              "% Partially Vaccinated": 0,
+              "ID": 1
+          },
+          {
+            "% Fully Vaccinated": 0,
+            "% Partially Vaccinated": 75,
+            "ID": 2
+        }],
+      "transform": [{
+          "type": "fold",
+          "fields": ["% Fully Vaccinated","% Partially Vaccinated"]
+      }, {
+          "type": "formula",
+          "as": "c",
+          "initonly": true,
+          "expr": "if(datum.key==='% Fully Vaccinated','#156fa3',if(datum.key==='% Partially Vaccinated','#35b1b5','red'))"
+      }, {
+            "type": "stack",
+            "groupby": ["ID"],
+            "field": "value",
+            "as": ["r0","r1"]
+          }
+        ]
+    }],
+  
+     "scales": [
+      {
+        "name": "IDbands",
+        "type": "band",
+        "paddingInner": { "signal": "bandPadding" },
+        "range": [{ "signal": "innerRadius" }, { "signal": "width/2" }],
+        "domain": {"data": "table", "field": "ID"}
+      },
+      {
+        "name": "angle",
+        "type": "linear",
+        "range": [{ "signal": "startAngle"}, { "signal": "endAngle"}],
+        "nice": true, "zero": true,
+        "domain": {"data": "table", "field": "r1"}
+      }
+    ],
+  
+    "marks": [
+      {
+        "type": "arc",
+        "from": {"data": "table"},
+        "encode": {
+          "enter": {
+            "x": {"signal": "width/2"},
+            "y": {"signal": "height / 2"}
+          },
+          "update": {
+            "fill": {"field": "c"},
+            "startAngle": { "scale": "angle", "field": "r0"},
+            "endAngle": { "scale": "angle", "field": "r1"},
+            "padAngle": {"signal": "padAngle"},
+            "innerRadius": { "scale": "IDbands", "field": "ID" },
+            "outerRadius": { "scale": "IDbands", "field": "ID", "offset": { "scale": "IDbands", "band": 1 } },
+            "cornerRadius": {"signal": "cornerRadius"},
+            "tooltip": { "signal": "datum.key+':  '+datum.value+'%'" }
+          }
+        }
+      }
+    ],
+    "config": {
+      "view": {
+        "strokeOpacity": 1,
+        "stroke": "black" 
+      }
+    }
+  }
+  
+  

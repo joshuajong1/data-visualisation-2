@@ -1,0 +1,88 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {
+        "url": "data/cases_malaysia_jun_to_aug.csv"
+    },
+    "height": 80,
+    "width": 700,
+    "title": "Daily Number of New Covid-19 Cases",
+    "config": {
+        "view": {
+            "strokeWidth": 0,
+            "step": 15
+        },
+        "axis": {
+            "domain": false
+        },
+        "background": "lightgrey",
+        "mark": {
+            "stroke": "darkgrey"
+        }
+    },
+    "params": [{
+        "name": "State_selection",
+        "bind": {
+          "input": "select",
+          "options": [
+            "All", "Johor", "Kedah",
+            "Kelantan", "Melaka",
+            "Negeri Sembilan", "Pahang",
+            "Penang", "Perak", "Perlis",
+            "Sabah", "Sarawak", "Selangor", 
+            "Terengganu", "W.P. Kuala Lumpur", 
+            "W.P. Labuan", "W.P. Putrajaya"
+          ],
+          "labels": [
+            "All", "Johor", "Kedah",
+            "Kelantan", "Melaka",
+            "Negeri Sembilan", "Pahang",
+            "Penang", "Perak", "Perlis",
+            "Sabah", "Sarawak", "Selangor", 
+            "Terengganu", "W.P. Kuala Lumpur", 
+            "W.P. Labuan", "W.P. Putrajaya"
+          ],
+          "name": "Choose a State: "
+        },
+        "value": "Malaysia"
+        }
+    ],
+    "transform": [{
+        "filter": "if(State_selection == 'All', datum.State == 'Malaysia', datum.State == State_selection)"
+    }],
+    "mark": "rect",
+    "encoding": {
+        "x": {
+            "field": "Date1",
+            "timeUnit": "date",
+            "type": "ordinal",
+            "title": "Day",
+            "axis": {
+                "labelAngle": 0,
+                "format": "%e"
+            }
+        },
+        "y": {
+            "field": "Date1",
+            "timeUnit": "month",
+            "type": "ordinal",
+            "title": "Month"
+        },
+        "color": {
+            "field": "Total Cases",
+            "aggregate": "max",
+            "type": "quantitative",
+            "legend": {
+                "title": null
+            },
+            "scale": {
+                "range": [
+                    "lightgrey", "red" 
+                ]
+            }
+        },
+        "tooltip": [
+            {"field": "Date", "type":"ordinal"},
+            {"field": "Total Cases"}
+        ]
+    }
+}

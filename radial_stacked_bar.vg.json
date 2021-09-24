@@ -1,0 +1,149 @@
+{
+    "$sStateema": "https://vega.github.io/sStateema/vega/v5.json",
+    "width": 500,
+    "height": 200,
+    "padding": 5,
+  
+  "signals": [
+      {
+        "name": "startAngle", "value": -1.57,
+        "bind": {"input": "range", "min": -3.14, "max": 3.14, "step": 0.01}
+      },
+      {
+        "name": "endAngle", "value": 1.57,
+        "bind": {"input": "range", "min": -3.14, "max": 3.14, "step": 0.01}
+      },
+      {
+        "name": "innerPadding", "value": 0.1,
+        "bind": {"input": "range", "min": 0, "max": 5}
+      },
+      {
+        "name": "innerRadius", "value": 60,
+        "bind": {"input": "range", "min": 0, "max": 90, "step": 1}
+      },
+      {
+        "name": "cornerRadius", "value": 0,
+        "bind": {"input": "range", "min": 0, "max": 10, "step": 0.5}
+      }
+    ],
+  
+    "data": [{
+      "name": "table",
+      "values": [{
+              "RTK-AG": 12,
+              "PCR": 5,
+              "State": "Johor"
+          }, {
+              "RTK-AG": 7,
+              "PCR": 14,
+              "State": "Kedah"
+          }, {
+              "RTK-AG": 2,
+              "PCR": 2,
+              "State": "Kelantan"
+          }, {
+              "RTK-AG": 2,
+              "PCR": 1,
+              "State": "Melaka"
+          }, {
+              "RTK-AG": 1,
+              "PCR": 1,
+              "State": "Negeri Sembilan"
+          }, {
+              "RTK-AG": 22,
+              "PCR": 0,
+              "State": "Penang"
+          }, {
+              "RTK-AG": 21,
+              "PCR": 0,
+              "State": "Perak"
+          }, {
+              "RTK-AG": 3,
+              "PCR": 2,
+              "State": "Perlis"
+          }, {
+              "RTK-AG": 0,
+              "PCR": 1,
+              "State": "Sabah"
+          }, {
+              "RTK-AG": 12,
+              "PCR": 3,
+              "State": "Sarawak"
+          }, {
+              "RTK-AG": 12,
+              "PCR": 0,
+              "State": "Selangor"
+          }, {
+              "RTK-AG": 1,
+              "PCR": 3,
+              "State": "W.P. Kuala Lumpur"
+          }, {
+            "RTK-AG": 1,
+            "PCR": 3,
+            "State": "W.P. Labuan"
+          }, {
+            "RTK-AG": 1,
+            "PCR": 3,
+            "State": "W.P. Putrajaya"
+          }
+        ],
+      "transform": [{
+          "type": "fold",
+          "fields": ["RTK-AG","PCR"]
+      }, {
+          "type": "formula",
+          "as": "c",
+          "initonly": true,
+          "expr": "if(datum.key==='RTK-AG','green',if(datum.key==='free','#eee','red'))"
+      }, {
+            "type": "stack",
+            "groupby": ["State"],
+            "field": "value",
+            "as": ["r0","r1"]
+          }
+        ]
+    }],
+  
+     "scales": [
+      {
+        "name": "Statebands",
+        "type": "band",
+        "paddingInner": { "signal": "innerPadding" },
+        "range": [{ "signal": "startAngle" }, { "signal": "endAngle" }],
+        "domain": {"data": "table", "field": "State"}
+      },
+      {
+        "name": "angle",
+        "type": "linear",
+        "range": [{ "signal": "innerRadius"}, { "signal": "width / 2"}],
+        "nice": true,
+        "domain": {"data": "table", "field": "r1"}
+      }
+    ],
+  
+    "marks": [
+      {
+        "type": "arc",
+        "from": {"data": "table"},
+        "encode": {
+            "text": {"field": "State"},
+            "enter": {
+                "padAngle": 0,
+                    "x": {"signal": "width / 2"},
+                    "y": {"signal": "height / 2"}
+            },
+            "update": {
+                "fill": {"field": "c"},
+                "startAngle": { "scale": "Statebands", "field": "State"},
+                "endAngle": { "scale": "Statebands", "field": "State", "offset": { "scale": "Statebands", "band": 1 }},
+                "innerRadius": { "scale": "angle", "field": "r0" },
+                "outerRadius": { "scale": "angle", "field": "r1" },
+                "cornerRadius": {"signal": "cornerRadius"},
+                "tooltip": { "signal": "'Ch'+datum.State+'  '+datum.key+'  '+datum.value+'%'" }
+            }
+        }
+      }
+    ]
+  }
+  
+  
