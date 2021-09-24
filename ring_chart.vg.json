@@ -9,7 +9,7 @@
         "name": "startAngle", "value": 0
       },
       {
-        "name": "endAngle", "value": 5.1
+        "name": "endAngle", "value": 4
       },
       {
         "name": "padAngle", "value": 0
@@ -28,13 +28,13 @@
     "data": [{
       "name": "table",
       "values": [{
-              "% Fully Vaccinated": 65,
+              "% Fully Vaccinated": 47.4,
               "% Partially Vaccinated": 0,
               "ID": 1
           },
           {
             "% Fully Vaccinated": 0,
-            "% Partially Vaccinated": 75,
+            "% Partially Vaccinated": 62.1,
             "ID": 2
         }],
       "transform": [{
@@ -44,7 +44,7 @@
           "type": "formula",
           "as": "c",
           "initonly": true,
-          "expr": "if(datum.key==='% Fully Vaccinated','#156fa3',if(datum.key==='% Partially Vaccinated','#35b1b5','red'))"
+          "expr": "if(datum.key==='% Fully Vaccinated','#CC3E78',if(datum.key==='% Partially Vaccinated','#00ABB5','red'))"
       }, {
             "type": "stack",
             "groupby": ["ID"],

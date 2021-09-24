@@ -3,7 +3,14 @@
   "data": {
     "url": "data/testing-average-by-state.csv"
   },
-  "width": 600,
+  "title": {
+    "text": "Covid-19 Tests Conducted by States from June 2021 to August 2021",
+    "color": "#156fa3",
+    "fontSize": 20,
+    "font": "Arial",
+    "offset": 20
+  },
+  "width": 430,
   "height": 500,
   "params": [{
     "name": "Test_selection",
@@ -54,25 +61,34 @@
     "size": {
         "field": "Tests Conducted",
         "type": "quantitative",
-        "legend": true,
-        "scale": {"range": [0, 3000]},
-        "legend": null
+        "scale": {"range": [0, 3000]}
     },
     "tooltip": [
       {"field": "State", "type": "nominal"},
-      {"field": "Tests Conducted", "type": "quantitative", "format": ","}    ]
+      {"field": "Tests Conducted", "type": "quantitative", "format": ","}    
+    ]
   },
   "config": {
-    "background": "lightgray",
+    "background": "#b3e9ff",
     "axis": {
       "grid": true,
       "gridOpacity": 0.5,
       "gridColor": "grey",
       "domain": false,
-      "ticks": false
+      "ticks": false,
+      "labelColor": "#156fa3",
+      "titleColor": "#156fa3",
+      "labelFontSize": 12,
+      "titleFontSize": 12
     },
     "view": {
       "strokeOpacity": 0
+    },
+    "legend": {
+      "labelColor": "#156fa3",
+      "titleColor": "#156fa3",
+      "labelFontSize": 12,
+      "titleFontSize": 12
     }
   }
 }

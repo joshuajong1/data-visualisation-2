@@ -64,3 +64,67 @@
         }
       }
     },
+    
+
+    "color": {
+      "field": "Species",
+      "type": "nominal",
+      "legend": null,
+      "scale": {
+        "domain": ["1 Person"],
+        "range": [
+          "black"
+        ]
+      }
+    },
+
+
+    <div class="pure-u-1">
+            <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+            <script type="text/javascript">
+            google.charts.load('current', {'packages':['sankey']});
+            google.charts.setOnLoadCallback(drawChart);
+
+            function drawChart() {
+                var data = new google.visualization.DataTable();
+                data.addColumn('string', 'From');
+                data.addColumn('string', 'Brand');
+                data.addColumn('number', 'Population Covered');
+                data.addRows([
+                [ 'Self-Purchase', 'AstraZeneca', 10 ],
+                [ 'Self-Purchase', 'CanSino', 10.9 ],
+                [ 'Covax Participation', 'AstraZeneca', 10 ],
+                [ 'Self-Purchase', 'Sinovac', 18.75 ],
+                [ 'Self-Purchase', 'Sputnik V', 10 ],
+                [ 'Self-Purchase', 'Pfizer', 50 ]
+                ]);
+
+                // Sets chart options.
+                var options = {
+                    width: 550,
+                    height: 300,
+                    sankey: { 
+                        link: { 
+                            color: { 
+                                fill: "lightblue"
+                            }
+                        },
+                        node: { 
+                            colors: [ '#4f62c4' ],
+                            label: { 
+                                color: '#4f62c4',
+                                fontSize: 20
+                            },
+                            width: 10,
+                            nodePadding: 20
+                        }
+                    },
+                    tooltip: {isHTML: true}
+                };
+
+                // Instantiates and draws our chart, passing in some options.
+                var chart = new google.visualization.Sankey(document.getElementById('sankey_basic'));
+                chart.draw(data, options);
+            }
+            </script>
+        </div>

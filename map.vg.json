@@ -1,6 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 900,
+    "width": 1000,
     "height": 400,
     "data": {
       "url": "data/states-topo.json",
@@ -37,7 +37,7 @@
       }
     ],
     "projection": {
-      "type": "mercator"
+      "type": "equirectangular"
     },
     "mark": {
       "type": "geoshape",
@@ -47,7 +47,7 @@
       "color": {
         "field": "% of Population",
         "type": "quantitative",
-        "scale": {"type": "log"}
+        "scale": {"type": "log", "range": ["#CCF7E9", "#009148"]}
       },
       "tooltip": [
         {"field": "properties.Name", "type": "nominal", "title": "State"},       
@@ -55,7 +55,7 @@
         {"field": "% of Population", "type": "quantitative", "title": "% Vaccinated"}      ]
     },
     "config": {
-      "background": "lightgray",
+      "background": "#b3e9ff",
       "view": {
         "strokeOpacity": 0,
         "stroke": "black"

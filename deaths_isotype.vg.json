@@ -1,7 +1,8 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 800,
-    "height": 200,
+    "width": 400,
+    "height": 100,
+    "title": "Deaths per Million in Malaysia from June 2021 to August 2021",
     "config": {
         "view": {
             "strokeWidth": 0,
@@ -10,9 +11,20 @@
         "axis": {
             "domain": false
         },
-        "background": "lightgrey",
+        "background": "#b3e9ff",
         "mark": {
             "stroke": "darkgrey"
+        },
+        "title": {
+            "fontSize": 17,
+            "dx": 0,
+            "color": "#156fa3"
+        },
+        "headerRow": {
+            "labelFontSize": 15,
+            "labelAngle": 360,
+            "labelAlign": "left",
+            "labelColor": "#156fa3"
         }
     },
     "data": {
@@ -22,15 +34,19 @@
     "encoding": {
       "x": {"field": "Deaths per million", "type": "ordinal", "axis": null},
       "y": {"field": "Species", "type": "ordinal", "axis": null},
-      "row": {"field": "Month", "header": {"title": ""}, "sort": ["June", "July", "August"]},
+      "row": {
+          "field": "Month", 
+          "header": {"title": ""},
+          "sort": ["June", "July", "August"]
+        },
       "shape": {
         "field": "Species",
         "type": "nominal",
         "scale": {
-          "domain": ["person"],
+          "domain": ["1 Person"],
           "range": [
             "M1.7 -1.7h-0.8c0.3 -0.2 0.6 -0.5 0.6 -0.9c0 -0.6 -0.4 -1 -1 -1c-0.6 0 -1 0.4 -1 1c0 0.4 0.2 0.7 0.6 0.9h-0.8c-0.4 0 -0.7 0.3 -0.7 0.6v1.9c0 0.3 0.3 0.6 0.6 0.6h0.2c0 0 0 0.1 0 0.1v1.9c0 0.3 0.2 0.6 0.3 0.6h1.3c0.2 0 0.3 -0.3 0.3 -0.6v-1.8c0 0 0 -0.1 0 -0.1h0.2c0.3 0 0.6 -0.3 0.6 -0.6v-2c0.2 -0.3 -0.1 -0.6 -0.4 -0.6z"
-                      ]
+            ]
         },
         "legend": null
       },
@@ -39,14 +55,15 @@
         "type": "nominal",
         "legend": null,
         "scale": {
-          "domain": ["person"],
+          "domain": ["1 Person"],
           "range": [
-            "black"
+            "#156fa3"
           ]
         }
       },
       "opacity": {"value": 1},
-      "size": {"value": 200}
+      "size": {"value": 100},
+      "tooltip": {"field": "Species"}
     }
   }
   

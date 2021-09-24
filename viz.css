@@ -20,7 +20,7 @@ img {
 }
 
 body {
-  background-color: lightgray;
+  background-color: #b3e9ff;
   border: none;
   padding: 0 !important;
   /*optional*/
@@ -32,6 +32,7 @@ body {
 h1 {
   font-size: 100px;
   color: rgb(0, 0, 0);
+  text-align: center;
 }
 
 .pure-u-1 {
@@ -45,7 +46,7 @@ h1 {
 }
 
 .pure-u-2-5 {
-  margin-left: 4%;
+  margin-left: 0%;
 }
 
 .pure-u-3-5 {
@@ -58,19 +59,13 @@ h1 {
 }
 
 .pure-u-1-2 {
-  margin-right: 6%;
+  margin-right: 0%;
   /*border-style: solid;*/
 }
 
 .pure-u-2-5 {
   margin-right: 0%;
   /*border-style: solid;*/
-}
-
-.pure-u-1-5 {
-  margin-left: 6%;
-  /*border-style: solid;*/
-  padding-left: 4%;
 }
 
 #text_div {
@@ -102,4 +97,8 @@ h1 {
   color: teal;
   font-weight: bold;
   padding-right: 0%;
+}
+
+p {
+  color: #156fa3;
 }

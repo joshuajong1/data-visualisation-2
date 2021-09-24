@@ -4,7 +4,7 @@
         "url": "data/icu_vent_usage.csv"
     },
     "height": 80,
-    "width": 700,
+    "width": 600,
     "title": "Daily ICU Usage",
     "params": [{
         "name": "State_selection",
@@ -41,9 +41,13 @@
         "axis": {
             "domain": false
         },
-        "background": "lightgrey",
+        "background": "#b3e9ff",
         "mark": {
             "stroke": "darkgrey"
+        },
+        "title": {
+            "color": "#156fa3",
+            "fontSize": 20
         }
     },
     "transform": [{
@@ -82,7 +86,7 @@
         },
         "tooltip": [
             {"field": "Date", "type":"ordinal"},
-            {"field": "icu_usage"}
+            {"field": "icu_usage", "title": "ICU Utilisation"}
         ]
     }
 }
