@@ -29,8 +29,8 @@ vegaEmbed("#radial_plot", vg_6).then(function (result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
 }).catch(console.error);
 
-var vg_7 = "heatmap_icu_usage.vg.json";
-vegaEmbed("#heatmap-icu", vg_7).then(function (result) {
+var vg_7 = "concat_heatmap.vg.json";
+vegaEmbed("#heatmap-concat", vg_7).then(function (result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
 }).catch(console.error);
 

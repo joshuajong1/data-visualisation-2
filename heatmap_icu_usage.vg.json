@@ -16,8 +16,8 @@
             "Negeri Sembilan", "Pahang",
             "Penang", "Perak", "Perlis",
             "Sabah", "Sarawak", "Selangor", 
-            "Terengganu", "W.P. Kuala Lumpur", 
-            "W.P. Labuan", "W.P. Putrajaya"
+            "Terengganu", "Federal Territory of Kuala Lumpur", 
+            "Federal Territory of Labuan", "Federal Territory of Putrajaya"
           ],
           "labels": [
             "Johor", "Kedah",
@@ -25,8 +25,8 @@
             "Negeri Sembilan", "Pahang",
             "Penang", "Perak", "Perlis",
             "Sabah", "Sarawak", "Selangor", 
-            "Terengganu", "W.P. Kuala Lumpur", 
-            "W.P. Labuan", "W.P. Putrajaya"
+            "Terengganu", "Kuala Lumpur", 
+            "Labuan", "Putrajaya"
           ],
           "name": "Choose a State: "
         },
