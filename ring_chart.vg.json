@@ -44,7 +44,7 @@
           "type": "formula",
           "as": "c",
           "initonly": true,
-          "expr": "if(datum.key==='% Fully Vaccinated','#CC3E78',if(datum.key==='% Partially Vaccinated','#00ABB5','red'))"
+          "expr": "if(datum.key==='% Fully Vaccinated','#CC3E78',if(datum.key==='% Partially Vaccinated','#01574d','red'))"
       }, {
             "type": "stack",
             "groupby": ["ID"],

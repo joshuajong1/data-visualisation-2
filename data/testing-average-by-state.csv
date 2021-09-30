@@ -26,7 +26,6 @@ Week,State,Tests Conducted,Test_Kit
 26 Aug – 31 Aug,Johor,9336,RTK-AG
 26 Aug – 31 Aug,Johor,8325,PCR
 26 Aug – 31 Aug,Johor,17661,Both
-,,,
 1 Jul – 7 Jul,Kedah,1951,RTK-AG
 1 Jul – 7 Jul,Kedah,1381,PCR
 1 Jul – 7 Jul,Kedah,3332,Both
@@ -54,7 +53,6 @@ Week,State,Tests Conducted,Test_Kit
 26 Aug – 31 Aug,Kedah,3535,RTK-AG
 26 Aug – 31 Aug,Kedah,3524,PCR
 26 Aug – 31 Aug,Kedah,7059,Both
-,,,
 1 Jul – 7 Jul,Kelantan,1047,RTK-AG
 1 Jul – 7 Jul,Kelantan,1879,PCR
 1 Jul – 7 Jul,Kelantan,2926,Both
@@ -82,7 +80,6 @@ Week,State,Tests Conducted,Test_Kit
 26 Aug – 31 Aug,Kelantan,2314,RTK-AG
 26 Aug – 31 Aug,Kelantan,2333,PCR
 26 Aug – 31 Aug,Kelantan,4647,Both
-,,,
 1 Jul – 7 Jul,Melaka,1008,RTK-AG
 1 Jul – 7 Jul,Melaka,2292,PCR
 1 Jul – 7 Jul,Melaka,3300,Both
@@ -110,7 +107,6 @@ Week,State,Tests Conducted,Test_Kit
 26 Aug – 31 Aug,Melaka,1628,RTK-AG
 26 Aug – 31 Aug,Melaka,1495,PCR
 26 Aug – 31 Aug,Melaka,3123,Both
-,,,
 1 Jul – 7 Jul,Negeri Sembilan,2024,RTK-AG
 1 Jul – 7 Jul,Negeri Sembilan,3709,PCR
 1 Jul – 7 Jul,Negeri Sembilan,5733,Both
@@ -138,7 +134,6 @@ Week,State,Tests Conducted,Test_Kit
 26 Aug – 31 Aug,Negeri Sembilan,2151,RTK-AG
 26 Aug – 31 Aug,Negeri Sembilan,1203,PCR
 26 Aug – 31 Aug,Negeri Sembilan,3354,Both
-,,,
 1 Jul – 7 Jul,Pahang,1809,RTK-AG
 1 Jul – 7 Jul,Pahang,2631,PCR
 1 Jul – 7 Jul,Pahang,4440,Both
@@ -166,63 +161,6 @@ Week,State,Tests Conducted,Test_Kit
 26 Aug – 31 Aug,Pahang,1999,RTK-AG
 26 Aug – 31 Aug,Pahang,3759,PCR
 26 Aug – 31 Aug,Pahang,5758,Both
-,,,
-1 Jul – 7 Jul,Perak,1519,RTK-AG
-1 Jul – 7 Jul,Perak,2071,PCR
-1 Jul – 7 Jul,Perak,3590,Both
-8 Jul – 14 Jul,Perak,1691,RTK-AG
-8 Jul – 14 Jul,Perak,2153,PCR
-8 Jul – 14 Jul,Perak,3844,Both
-15 Jul – 21 Jul,Perak,2204,RTK-AG
-15 Jul – 21 Jul,Perak,2468,PCR
-15 Jul – 21 Jul,Perak,4672,Both
-22 Jul – 28 Jul,Perak,3117,RTK-AG
-22 Jul – 28 Jul,Perak,2814,PCR
-22 Jul – 28 Jul,Perak,5931,Both
-29 Jul – 4 Aug,Perak,3788,RTK-AG
-29 Jul – 4 Aug,Perak,3833,PCR
-29 Jul – 4 Aug,Perak,7621,Both
-5 Aug – 11 Aug,Perak,3591,RTK-AG
-5 Aug – 11 Aug,Perak,3044,PCR
-5 Aug – 11 Aug,Perak,6635,Both
-12 Aug – 18 Aug,Perak,5305,RTK-AG
-12 Aug – 18 Aug,Perak,3517,PCR
-12 Aug – 18 Aug,Perak,8822,Both
-19 Aug – 25 Aug,Perak,5067,RTK-AG
-19 Aug – 25 Aug,Perak,3241,PCR
-19 Aug – 25 Aug,Perak,8308,Both
-26 Aug – 31 Aug,Perak,3225,RTK-AG
-26 Aug – 31 Aug,Perak,2586,PCR
-26 Aug – 31 Aug,Perak,5811,Both
-,,,
-1 Jul – 7 Jul,Perlis,84,RTK-AG
-1 Jul – 7 Jul,Perlis,25,PCR
-1 Jul – 7 Jul,Perlis,109,Both
-8 Jul – 14 Jul,Perlis,89,RTK-AG
-8 Jul – 14 Jul,Perlis,33,PCR
-8 Jul – 14 Jul,Perlis,122,Both
-15 Jul – 21 Jul,Perlis,74,RTK-AG
-15 Jul – 21 Jul,Perlis,35,PCR
-15 Jul – 21 Jul,Perlis,109,Both
-22 Jul – 28 Jul,Perlis,142,RTK-AG
-22 Jul – 28 Jul,Perlis,37,PCR
-22 Jul – 28 Jul,Perlis,180,Both
-29 Jul – 4 Aug,Perlis,148,RTK-AG
-29 Jul – 4 Aug,Perlis,125,PCR
-29 Jul – 4 Aug,Perlis,273,Both
-5 Aug – 11 Aug,Perlis,232,RTK-AG
-5 Aug – 11 Aug,Perlis,71,PCR
-5 Aug – 11 Aug,Perlis,303,Both
-12 Aug – 18 Aug,Perlis,309,RTK-AG
-12 Aug – 18 Aug,Perlis,136,PCR
-12 Aug – 18 Aug,Perlis,445,Both
-19 Aug – 25 Aug,Perlis,212,RTK-AG
-19 Aug – 25 Aug,Perlis,149,PCR
-19 Aug – 25 Aug,Perlis,361,Both
-26 Aug – 31 Aug,Perlis,161,RTK-AG
-26 Aug – 31 Aug,Perlis,138,PCR
-26 Aug – 31 Aug,Perlis,299,Both
-,,,
 1 Jul – 7 Jul,Penang,3865,RTK-AG
 1 Jul – 7 Jul,Penang,1347,PCR
 1 Jul – 7 Jul,Penang,5212,Both
@@ -250,7 +188,60 @@ Week,State,Tests Conducted,Test_Kit
 26 Aug – 31 Aug,Penang,6679,RTK-AG
 26 Aug – 31 Aug,Penang,3045,PCR
 26 Aug – 31 Aug,Penang,9724,Both
-,,,
+1 Jul – 7 Jul,Perak,1519,RTK-AG
+1 Jul – 7 Jul,Perak,2071,PCR
+1 Jul – 7 Jul,Perak,3590,Both
+8 Jul – 14 Jul,Perak,1691,RTK-AG
+8 Jul – 14 Jul,Perak,2153,PCR
+8 Jul – 14 Jul,Perak,3844,Both
+15 Jul – 21 Jul,Perak,2204,RTK-AG
+15 Jul – 21 Jul,Perak,2468,PCR
+15 Jul – 21 Jul,Perak,4672,Both
+22 Jul – 28 Jul,Perak,3117,RTK-AG
+22 Jul – 28 Jul,Perak,2814,PCR
+22 Jul – 28 Jul,Perak,5931,Both
+29 Jul – 4 Aug,Perak,3788,RTK-AG
+29 Jul – 4 Aug,Perak,3833,PCR
+29 Jul – 4 Aug,Perak,7621,Both
+5 Aug – 11 Aug,Perak,3591,RTK-AG
+5 Aug – 11 Aug,Perak,3044,PCR
+5 Aug – 11 Aug,Perak,6635,Both
+12 Aug – 18 Aug,Perak,5305,RTK-AG
+12 Aug – 18 Aug,Perak,3517,PCR
+12 Aug – 18 Aug,Perak,8822,Both
+19 Aug – 25 Aug,Perak,5067,RTK-AG
+19 Aug – 25 Aug,Perak,3241,PCR
+19 Aug – 25 Aug,Perak,8308,Both
+26 Aug – 31 Aug,Perak,3225,RTK-AG
+26 Aug – 31 Aug,Perak,2586,PCR
+26 Aug – 31 Aug,Perak,5811,Both
+1 Jul – 7 Jul,Perlis,84,RTK-AG
+1 Jul – 7 Jul,Perlis,25,PCR
+1 Jul – 7 Jul,Perlis,109,Both
+8 Jul – 14 Jul,Perlis,89,RTK-AG
+8 Jul – 14 Jul,Perlis,33,PCR
+8 Jul – 14 Jul,Perlis,122,Both
+15 Jul – 21 Jul,Perlis,74,RTK-AG
+15 Jul – 21 Jul,Perlis,35,PCR
+15 Jul – 21 Jul,Perlis,109,Both
+22 Jul – 28 Jul,Perlis,142,RTK-AG
+22 Jul – 28 Jul,Perlis,37,PCR
+22 Jul – 28 Jul,Perlis,180,Both
+29 Jul – 4 Aug,Perlis,148,RTK-AG
+29 Jul – 4 Aug,Perlis,125,PCR
+29 Jul – 4 Aug,Perlis,273,Both
+5 Aug – 11 Aug,Perlis,232,RTK-AG
+5 Aug – 11 Aug,Perlis,71,PCR
+5 Aug – 11 Aug,Perlis,303,Both
+12 Aug – 18 Aug,Perlis,309,RTK-AG
+12 Aug – 18 Aug,Perlis,136,PCR
+12 Aug – 18 Aug,Perlis,445,Both
+19 Aug – 25 Aug,Perlis,212,RTK-AG
+19 Aug – 25 Aug,Perlis,149,PCR
+19 Aug – 25 Aug,Perlis,361,Both
+26 Aug – 31 Aug,Perlis,161,RTK-AG
+26 Aug – 31 Aug,Perlis,138,PCR
+26 Aug – 31 Aug,Perlis,299,Both
 1 Jul – 7 Jul,Sabah,2829,RTK-AG
 1 Jul – 7 Jul,Sabah,3317,PCR
 1 Jul – 7 Jul,Sabah,6146,Both
@@ -278,7 +269,6 @@ Week,State,Tests Conducted,Test_Kit
 26 Aug – 31 Aug,Sabah,5230,RTK-AG
 26 Aug – 31 Aug,Sabah,4124,PCR
 26 Aug – 31 Aug,Sabah,9354,Both
-,,,
 1 Jul – 7 Jul,Sarawak,1715,RTK-AG
 1 Jul – 7 Jul,Sarawak,5509,PCR
 1 Jul – 7 Jul,Sarawak,7224,Both
@@ -306,7 +296,6 @@ Week,State,Tests Conducted,Test_Kit
 26 Aug – 31 Aug,Sarawak,3889,RTK-AG
 26 Aug – 31 Aug,Sarawak,9742,PCR
 26 Aug – 31 Aug,Sarawak,13631,Both
-,,,
 1 Jul – 7 Jul,Sarawak,1715,RTK-AG
 1 Jul – 7 Jul,Sarawak,5509,PCR
 1 Jul – 7 Jul,Sarawak,7224,Both
@@ -334,7 +323,6 @@ Week,State,Tests Conducted,Test_Kit
 26 Aug – 31 Aug,Sarawak,3889,RTK-AG
 26 Aug – 31 Aug,Sarawak,9742,PCR
 26 Aug – 31 Aug,Sarawak,13631,Both
-,,,
 1 Jul – 7 Jul,Selangor,11952,RTK-AG
 1 Jul – 7 Jul,Selangor,15644,PCR
 1 Jul – 7 Jul,Selangor,27596,Both
@@ -362,7 +350,6 @@ Week,State,Tests Conducted,Test_Kit
 26 Aug – 31 Aug,Selangor,15465,RTK-AG
 26 Aug – 31 Aug,Selangor,9955,PCR
 26 Aug – 31 Aug,Selangor,25420,Both
-,,,
 1 Jul – 7 Jul,Terengganu,900,RTK-AG
 1 Jul – 7 Jul,Terengganu,947,PCR
 1 Jul – 7 Jul,Terengganu,1847,Both
@@ -390,87 +377,84 @@ Week,State,Tests Conducted,Test_Kit
 26 Aug – 31 Aug,Terengganu,1878,RTK-AG
 26 Aug – 31 Aug,Terengganu,2771,PCR
 26 Aug – 31 Aug,Terengganu,4649,Both
-,,,
-1 Jul – 7 Jul,W.P. Kuala Lumpur,3693,RTK-AG
-1 Jul – 7 Jul,W.P. Kuala Lumpur,6889,PCR
-1 Jul – 7 Jul,W.P. Kuala Lumpur,10582,Both
-8 Jul – 14 Jul,W.P. Kuala Lumpur,4768,RTK-AG
-8 Jul – 14 Jul,W.P. Kuala Lumpur,8026,PCR
-8 Jul – 14 Jul,W.P. Kuala Lumpur,12794,Both
-15 Jul – 21 Jul,W.P. Kuala Lumpur,6817,RTK-AG
-15 Jul – 21 Jul,W.P. Kuala Lumpur,9155,PCR
-15 Jul – 21 Jul,W.P. Kuala Lumpur,15972,Both
-22 Jul – 28 Jul,W.P. Kuala Lumpur,8290,RTK-AG
-22 Jul – 28 Jul,W.P. Kuala Lumpur,9482,PCR
-22 Jul – 28 Jul,W.P. Kuala Lumpur,17772,Both
-29 Jul – 4 Aug,W.P. Kuala Lumpur,7163,RTK-AG
-29 Jul – 4 Aug,W.P. Kuala Lumpur,7535,PCR
-29 Jul – 4 Aug,W.P. Kuala Lumpur,14698,Both
-5 Aug – 11 Aug,W.P. Kuala Lumpur,6775,RTK-AG
-5 Aug – 11 Aug,W.P. Kuala Lumpur,6853,PCR
-5 Aug – 11 Aug,W.P. Kuala Lumpur,13628,Both
-12 Aug – 18 Aug,W.P. Kuala Lumpur,6119,RTK-AG
-12 Aug – 18 Aug,W.P. Kuala Lumpur,7028,PCR
-12 Aug – 18 Aug,W.P. Kuala Lumpur,13147,Both
-19 Aug – 25 Aug,W.P. Kuala Lumpur,4938,RTK-AG
-19 Aug – 25 Aug,W.P. Kuala Lumpur,5997,PCR
-19 Aug – 25 Aug,W.P. Kuala Lumpur,10935,Both
-26 Aug – 31 Aug,W.P. Kuala Lumpur,3460,RTK-AG
-26 Aug – 31 Aug,W.P. Kuala Lumpur,4229,PCR
-26 Aug – 31 Aug,W.P. Kuala Lumpur,7689,Both
-,,,
-1 Jul – 7 Jul,W.P. Labuan,1123,RTK-AG
-1 Jul – 7 Jul,W.P. Labuan,241,PCR
-1 Jul – 7 Jul,W.P. Labuan,1364,Both
-8 Jul – 14 Jul,W.P. Labuan,841,RTK-AG
-8 Jul – 14 Jul,W.P. Labuan,192,PCR
-8 Jul – 14 Jul,W.P. Labuan,1033,Both
-15 Jul – 21 Jul,W.P. Labuan,589,RTK-AG
-15 Jul – 21 Jul,W.P. Labuan,190,PCR
-15 Jul – 21 Jul,W.P. Labuan,779,Both
-22 Jul – 28 Jul,W.P. Labuan,666,RTK-AG
-22 Jul – 28 Jul,W.P. Labuan,160,PCR
-22 Jul – 28 Jul,W.P. Labuan,826,Both
-29 Jul – 4 Aug,W.P. Labuan,427,RTK-AG
-29 Jul – 4 Aug,W.P. Labuan,139,PCR
-29 Jul – 4 Aug,W.P. Labuan,566,Both
-5 Aug – 11 Aug,W.P. Labuan,293,RTK-AG
-5 Aug – 11 Aug,W.P. Labuan,208,PCR
-5 Aug – 11 Aug,W.P. Labuan,501,Both
-12 Aug – 18 Aug,W.P. Labuan,304,RTK-AG
-12 Aug – 18 Aug,W.P. Labuan,196,PCR
-12 Aug – 18 Aug,W.P. Labuan,500,Both
-19 Aug – 25 Aug,W.P. Labuan,342,RTK-AG
-19 Aug – 25 Aug,W.P. Labuan,148,PCR
-19 Aug – 25 Aug,W.P. Labuan,490,Both
-26 Aug – 31 Aug,W.P. Labuan,239,RTK-AG
-26 Aug – 31 Aug,W.P. Labuan,149,PCR
-26 Aug – 31 Aug,W.P. Labuan,368,Both
-,,,
-1 Jul – 7 Jul,W.P. Putrajaya,158,RTK-AG
-1 Jul – 7 Jul,W.P. Putrajaya,286,PCR
-1 Jul – 7 Jul,W.P. Putrajaya,444,Both
-8 Jul – 14 Jul,W.P. Putrajaya,1053,RTK-AG
-8 Jul – 14 Jul,W.P. Putrajaya,406,PCR
-8 Jul – 14 Jul,W.P. Putrajaya,1459,Both
-15 Jul – 21 Jul,W.P. Putrajaya,168,RTK-AG
-15 Jul – 21 Jul,W.P. Putrajaya,432,PCR
-15 Jul – 21 Jul,W.P. Putrajaya,600,Both
-22 Jul – 28 Jul,W.P. Putrajaya,239,RTK-AG
-22 Jul – 28 Jul,W.P. Putrajaya,528,PCR
-22 Jul – 28 Jul,W.P. Putrajaya,767,Both
-29 Jul – 4 Aug,W.P. Putrajaya,198,RTK-AG
-29 Jul – 4 Aug,W.P. Putrajaya,460,PCR
-29 Jul – 4 Aug,W.P. Putrajaya,658,Both
-5 Aug – 11 Aug,W.P. Putrajaya,165,RTK-AG
-5 Aug – 11 Aug,W.P. Putrajaya,263,PCR
-5 Aug – 11 Aug,W.P. Putrajaya,428,Both
-12 Aug – 18 Aug,W.P. Putrajaya,170,RTK-AG
-12 Aug – 18 Aug,W.P. Putrajaya,311,PCR
-12 Aug – 18 Aug,W.P. Putrajaya,481,Both
-19 Aug – 25 Aug,W.P. Putrajaya,159,RTK-AG
-19 Aug – 25 Aug,W.P. Putrajaya,172,PCR
-19 Aug – 25 Aug,W.P. Putrajaya,331,Both
-26 Aug – 31 Aug,W.P. Putrajaya,120,RTK-AG
-26 Aug – 31 Aug,W.P. Putrajaya,191,PCR
-26 Aug – 31 Aug,W.P. Putrajaya,311,Both
+1 Jul – 7 Jul,Federal Territory of Kuala Lumpur,3693,RTK-AG
+1 Jul – 7 Jul,Federal Territory of Kuala Lumpur,6889,PCR
+1 Jul – 7 Jul,Federal Territory of Kuala Lumpur,10582,Both
+8 Jul – 14 Jul,Federal Territory of Kuala Lumpur,4768,RTK-AG
+8 Jul – 14 Jul,Federal Territory of Kuala Lumpur,8026,PCR
+8 Jul – 14 Jul,Federal Territory of Kuala Lumpur,12794,Both
+15 Jul – 21 Jul,Federal Territory of Kuala Lumpur,6817,RTK-AG
+15 Jul – 21 Jul,Federal Territory of Kuala Lumpur,9155,PCR
+15 Jul – 21 Jul,Federal Territory of Kuala Lumpur,15972,Both
+22 Jul – 28 Jul,Federal Territory of Kuala Lumpur,8290,RTK-AG
+22 Jul – 28 Jul,Federal Territory of Kuala Lumpur,9482,PCR
+22 Jul – 28 Jul,Federal Territory of Kuala Lumpur,17772,Both
+29 Jul – 4 Aug,Federal Territory of Kuala Lumpur,7163,RTK-AG
+29 Jul – 4 Aug,Federal Territory of Kuala Lumpur,7535,PCR
+29 Jul – 4 Aug,Federal Territory of Kuala Lumpur,14698,Both
+5 Aug – 11 Aug,Federal Territory of Kuala Lumpur,6775,RTK-AG
+5 Aug – 11 Aug,Federal Territory of Kuala Lumpur,6853,PCR
+5 Aug – 11 Aug,Federal Territory of Kuala Lumpur,13628,Both
+12 Aug – 18 Aug,Federal Territory of Kuala Lumpur,6119,RTK-AG
+12 Aug – 18 Aug,Federal Territory of Kuala Lumpur,7028,PCR
+12 Aug – 18 Aug,Federal Territory of Kuala Lumpur,13147,Both
+19 Aug – 25 Aug,Federal Territory of Kuala Lumpur,4938,RTK-AG
+19 Aug – 25 Aug,Federal Territory of Kuala Lumpur,5997,PCR
+19 Aug – 25 Aug,Federal Territory of Kuala Lumpur,10935,Both
+26 Aug – 31 Aug,Federal Territory of Kuala Lumpur,3460,RTK-AG
+26 Aug – 31 Aug,Federal Territory of Kuala Lumpur,4229,PCR
+26 Aug – 31 Aug,Federal Territory of Kuala Lumpur,7689,Both
+1 Jul – 7 Jul,Federal Territory of Labuan,1123,RTK-AG
+1 Jul – 7 Jul,Federal Territory of Labuan,241,PCR
+1 Jul – 7 Jul,Federal Territory of Labuan,1364,Both
+8 Jul – 14 Jul,Federal Territory of Labuan,841,RTK-AG
+8 Jul – 14 Jul,Federal Territory of Labuan,192,PCR
+8 Jul – 14 Jul,Federal Territory of Labuan,1033,Both
+15 Jul – 21 Jul,Federal Territory of Labuan,589,RTK-AG
+15 Jul – 21 Jul,Federal Territory of Labuan,190,PCR
+15 Jul – 21 Jul,Federal Territory of Labuan,779,Both
+22 Jul – 28 Jul,Federal Territory of Labuan,666,RTK-AG
+22 Jul – 28 Jul,Federal Territory of Labuan,160,PCR
+22 Jul – 28 Jul,Federal Territory of Labuan,826,Both
+29 Jul – 4 Aug,Federal Territory of Labuan,427,RTK-AG
+29 Jul – 4 Aug,Federal Territory of Labuan,139,PCR
+29 Jul – 4 Aug,Federal Territory of Labuan,566,Both
+5 Aug – 11 Aug,Federal Territory of Labuan,293,RTK-AG
+5 Aug – 11 Aug,Federal Territory of Labuan,208,PCR
+5 Aug – 11 Aug,Federal Territory of Labuan,501,Both
+12 Aug – 18 Aug,Federal Territory of Labuan,304,RTK-AG
+12 Aug – 18 Aug,Federal Territory of Labuan,196,PCR
+12 Aug – 18 Aug,Federal Territory of Labuan,500,Both
+19 Aug – 25 Aug,Federal Territory of Labuan,342,RTK-AG
+19 Aug – 25 Aug,Federal Territory of Labuan,148,PCR
+19 Aug – 25 Aug,Federal Territory of Labuan,490,Both
+26 Aug – 31 Aug,Federal Territory of Labuan,239,RTK-AG
+26 Aug – 31 Aug,Federal Territory of Labuan,149,PCR
+26 Aug – 31 Aug,Federal Territory of Labuan,368,Both
+1 Jul – 7 Jul,Federal Territory of Putrajaya,158,RTK-AG
+1 Jul – 7 Jul,Federal Territory of Putrajaya,286,PCR
+1 Jul – 7 Jul,Federal Territory of Putrajaya,444,Both
+8 Jul – 14 Jul,Federal Territory of Putrajaya,1053,RTK-AG
+8 Jul – 14 Jul,Federal Territory of Putrajaya,406,PCR
+8 Jul – 14 Jul,Federal Territory of Putrajaya,1459,Both
+15 Jul – 21 Jul,Federal Territory of Putrajaya,168,RTK-AG
+15 Jul – 21 Jul,Federal Territory of Putrajaya,432,PCR
+15 Jul – 21 Jul,Federal Territory of Putrajaya,600,Both
+22 Jul – 28 Jul,Federal Territory of Putrajaya,239,RTK-AG
+22 Jul – 28 Jul,Federal Territory of Putrajaya,528,PCR
+22 Jul – 28 Jul,Federal Territory of Putrajaya,767,Both
+29 Jul – 4 Aug,Federal Territory of Putrajaya,198,RTK-AG
+29 Jul – 4 Aug,Federal Territory of Putrajaya,460,PCR
+29 Jul – 4 Aug,Federal Territory of Putrajaya,658,Both
+5 Aug – 11 Aug,Federal Territory of Putrajaya,165,RTK-AG
+5 Aug – 11 Aug,Federal Territory of Putrajaya,263,PCR
+5 Aug – 11 Aug,Federal Territory of Putrajaya,428,Both
+12 Aug – 18 Aug,Federal Territory of Putrajaya,170,RTK-AG
+12 Aug – 18 Aug,Federal Territory of Putrajaya,311,PCR
+12 Aug – 18 Aug,Federal Territory of Putrajaya,481,Both
+19 Aug – 25 Aug,Federal Territory of Putrajaya,159,RTK-AG
+19 Aug – 25 Aug,Federal Territory of Putrajaya,172,PCR
+19 Aug – 25 Aug,Federal Territory of Putrajaya,331,Both
+26 Aug – 31 Aug,Federal Territory of Putrajaya,120,RTK-AG
+26 Aug – 31 Aug,Federal Territory of Putrajaya,191,PCR
+26 Aug – 31 Aug,Federal Territory of Putrajaya,311,Both

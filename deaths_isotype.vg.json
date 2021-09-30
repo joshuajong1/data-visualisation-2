@@ -11,7 +11,7 @@
         "axis": {
             "domain": false
         },
-        "background": "#b3e9ff",
+        "background": "#a8c0ce",
         "mark": {
             "stroke": "darkgrey"
         },

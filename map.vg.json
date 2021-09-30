@@ -47,7 +47,7 @@
       "color": {
         "field": "% of Population",
         "type": "quantitative",
-        "scale": {"type": "log", "range": ["#CCF7E9", "#009148"]}
+        "scale": {"type": "log", "range": ["#cbffc7", "#087500"]}
       },
       "tooltip": [
         {"field": "properties.Name", "type": "nominal", "title": "State"},       
@@ -55,7 +55,7 @@
         {"field": "% of Population", "type": "quantitative", "title": "% Vaccinated"}      ]
     },
     "config": {
-      "background": "#b3e9ff",
+      "background": "#a8c0ce",
       "view": {
         "strokeOpacity": 0,
         "stroke": "black"

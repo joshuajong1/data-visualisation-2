@@ -1,0 +1,52 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "Multi-series line chart with labels and interactive highlight on hover.  We also set the selection's initial value to provide a better screenshot",
+    "data": {"url": "data/average_cases_state.csv"},
+    "encoding": {
+      "x": {"field": "Week", "type": "ordinal", "title": "Week"},
+      "y": {"field": "Average Cases", "type": "quantitative", "title": "Average Cases"},
+      "color": {
+        "condition": {
+          "param": "hover",
+          "field":"State",
+          "type":"nominal",
+          "legend": null
+        },
+        "value": "grey"
+      },
+      "opacity": {
+        "condition": {
+          "param": "hover",
+          "value": 1
+        },
+        "value": 0.2
+      }
+    },
+    "layer": [{
+      "description": "transparent layer to make it easier to trigger selection",
+      "params": [{
+        "name": "hover",
+        "value": [{"State": "AAPL"}],
+        "select": {
+          "type": "point",
+          "fields": ["State"],
+          "on": "mouseover"
+        }
+      }],
+      "mark": {"type": "line", "strokeWidth": 8, "stroke": "transparent"}
+    }, {
+      "mark": "line"
+    }, {
+      "encoding": {
+        "x": {"aggregate": "max", "field": "Week"},
+        "y": {"aggregate": {"argmax": "Week"}, "field": "Average Cases"}
+      },
+      "layer": [{
+        "mark": {"type": "circle"}
+      }, {
+        "mark": {"type": "text", "align": "left", "dx": 4},
+        "encoding": {"text": {"field":"State", "type": "nominal"}}
+      }]
+    }],
+    "config": {"view": {"stroke": null}}
+  }

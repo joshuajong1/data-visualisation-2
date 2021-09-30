@@ -1,0 +1,106 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {
+      "url": "data/average_cases_state.csv"
+    },
+    "title": {
+      "text": "Covid-19 Cases by States from June 2021 to August 2021",
+      "color": "#156fa3",
+      "fontSize": 20,
+      "font": "Arial",
+      "offset": 20
+    },
+    "width": 430,
+    "height": 300,
+    "layer": [
+      {
+        "mark": {
+          "type": "line",
+          "opacity": 0.5,
+          "strokeWidth": 1,
+          "size": 800,
+          "orient": "vertical"
+        },
+        "encoding": {
+          "color": {"field": "State"},
+          "opacity": {
+            "condition": {"selection": "series", "value": 1},
+            "value": 0.2
+          }
+        },
+        "selection": {
+          "series": {
+            "type": "multi",
+            "encodings": ["color"],
+            "on": "click",
+            "bind": "legend"
+          }
+        }
+      },
+      {
+        "mark": {
+          "type": "circle",
+          "opacity": 0.5,
+          "strokeWidth": 1,
+          "size": 70,
+          "orient": "vertical"
+        },
+        "encoding": {
+          "color": {"field": "State"},
+          "opacity": {
+            "condition": {"selection": "series", "value": 1},
+            "value": 0.2
+          }
+        }
+      }
+    ],
+    "encoding": {
+      "x": {
+        "field": "Week",
+        "type": "nominal",
+        "axis": {
+          "labelFontSize": 12,
+          "grid": false,
+          "labelAngle": -45,
+          "titleFontSize": 0
+        },
+        "sort": ["Jul, Aug"]
+      },
+      "y": {
+        "field": "Average Cases",
+        "type": "quantitative",
+        "axis": {
+          "title": "State",
+          "labelFontSize": 12,
+          "titleFontSize": 0
+        }
+      },
+      "tooltip": [
+        {"field": "State", "type": "nominal"},
+        {"field": "Average Cases", "type": "quantitative", "format": ","}    
+      ]
+    },
+    "config": {
+      "background": "#a8c0ce",
+      "axis": {
+        "grid": true,
+        "gridOpacity": 0,
+        "gridColor": "grey",
+        "domain": false,
+        "ticks": false,
+        "labelColor": "#156fa3",
+        "titleColor": "#156fa3",
+        "labelFontSize": 12,
+        "titleFontSize": 12
+      },
+      "view": {
+        "strokeOpacity": 0
+      },
+      "legend": {
+        "labelColor": "#156fa3",
+        "titleColor": "#156fa3",
+        "labelFontSize": 12,
+        "titleFontSize": 12
+      }
+    }
+  }
