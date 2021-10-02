@@ -72,7 +72,7 @@
       "mark": {
         "type": "text", 
         "align":"left", 
-        "size": 15,
+        "size": 17,
         "stroke": null,
         "fill": "#156fa38f",
         "fontWeight": "lighter"
