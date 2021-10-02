@@ -1,0 +1,213 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {
+      "url": "data/average_cases_state_duplicated.csv"
+    },
+    "title": {
+      "text": "Covid-19 Average Testing (Left) Cases (Right) per Week by States from June 2021 to August 2021",
+      "color": "#156fa3",
+      "fontSize": 20,
+      "font": "Arial",
+      "offset": 30,
+      "dx":280
+    },
+    "params": [{
+        "name": "Test_selection",
+        "bind": {
+          "input": "select",
+          "options": [
+              "RTK-AG", "PCR", "Both"
+          ],
+          "labels": [
+            "RTK-AG", "PCR", "Show All"
+          ],
+          "name": "Type of Test: "
+        },
+        "value": "RTK-AG"
+        }
+    ],
+    "transform": [
+    {
+        "filter": "datum.Test_Kit == Test_selection"
+    }
+    ],
+    "concat": [
+        {"layer": [
+      {
+        "width": 600,
+      "height": 500,
+        "mark": {
+          "type": "circle",
+          "opacity": 0.5,
+          "strokeWidth": 1,
+          "size": 800,
+          "orient": "vertical"
+        },
+        "encoding": {
+          "color": {"field": "State"},
+          "opacity": {
+            "condition": {"selection": "series", "value": 1},
+            "value": 0.2
+          }
+        },
+        "selection": {
+          "series": {
+            "type": "multi",
+            "encodings": ["color"],
+            "on": "click",
+            "bind": "legend"
+          }
+        }
+      },
+      {
+        "mark": {
+          "type": "circle",
+          "opacity": 0.3,
+          "strokeWidth": 1,
+          "size": 70,
+          "orient": "vertical"
+        },
+        "encoding": {
+          "color": {"field": "State", "scale": {"range": ["#ea5e5e"]}},
+          "opacity": {
+            "condition": {"selection": "series", "value": 1},
+            "value": 0.01
+          }
+        }
+      }
+    ],
+    "encoding": {
+      "x": {
+        "field": "Week",
+        "type": "nominal",
+        "axis": {
+          "labelFontSize": 12,
+          "grid": false,
+          "labelAngle": -45,
+          "titleFontSize": 0
+        },
+        "sort": ["Jul, Aug"]
+      },
+      "y": {
+        "field": "State",
+        "type": "nominal",
+        "axis": {
+          "title": "State",
+          "labelFontSize": 0,
+          "titleFontSize": 0
+        }
+      },
+      "size": {
+        "field": "Tests Conducted",
+        "type": "quantitative",
+        "scale": {"range": [0, 3000]}
+      },
+      "tooltip": [
+        {"field": "State", "type": "nominal"},
+        {"field": "Tests Conducted", "type": "quantitative", "format": ","}
+      ]
+    }
+  },
+  {"layer": [
+    {
+      "width": 600,
+      "height": 500,
+      "mark": {
+        "type": "line",
+        "opacity": 0.5,
+        "strokeWidth": 1,
+        "size": 800,
+        "orient": "vertical"
+      },
+      "encoding": {
+        "color": {"field": "State"},
+        "opacity": {
+          "condition": {"selection": "series", "value": 1},
+          "value": 0.2
+        }
+      },
+      "selection": {
+        "series": {
+          "type": "multi",
+          "encodings": ["color"],
+          "on": "click",
+          "bind": "legend"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "circle",
+        "opacity": 0.5,
+        "strokeWidth": 1,
+        "size": 70,
+        "orient": "vertical"
+      },
+      "encoding": {
+        "color": {"field": "State", "scale": {"range": ["#ea5e5e"]}},
+        "opacity": {
+          "condition": {"selection": "series", "value": 1},
+          "value": 0.01
+        }
+      }
+    }
+  ],
+  "encoding": {
+    "x": {
+      "field": "Week",
+      "type": "nominal",
+      "axis": {
+        "labelFontSize": 12,
+        "grid": false,
+        "labelAngle": -45,
+        "titleFontSize": 0
+      },
+      "sort": ["Jul, Aug"]
+    },
+    "y": {
+      "field": "Average Cases",
+      "type": "quantitative",
+      "axis": {
+        "title": "State",
+        "labelFontSize": 12,
+        "titleFontSize": 0
+      }
+    },
+    "tooltip": [
+      {"field": "State", "type": "nominal"},
+      {"field": "Average Cases", "type": "quantitative", "format": ","}
+    ]
+  }
+}
+],
+  "config": {
+    "background": "#a8c0ce",
+    "width": 1000,
+    "height": 500,
+    "axis": {
+      "grid": true,
+      "gridOpacity": 0,
+      "gridColor": "grey",
+      "domain": false,
+      "ticks": false,
+      "labelColor": "#156fa3",
+      "titleColor": "#156fa3",
+      "labelFontSize": 15,
+      "titleFontSize": 12,
+      "labelPadding":10
+    },
+    "view": {
+      "strokeOpacity": 0
+    },
+    "legend": {
+      "labelColor": "#156fa3",
+      "titleColor": "#156fa3",
+      "labelFontSize": 15,
+      "titleFontSize": 16,
+      "orient": "left",
+      "symbolBaseFillColor": "#ea5e5e",
+      "labelSeparation":4,
+      "symbolSize": 10
+    },
+    "concat": {"spacing": 50}
+  }}

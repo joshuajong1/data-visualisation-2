@@ -128,3 +128,54 @@
             }
             </script>
         </div>
+
+
+
+,
+        {
+            "vconcat": [
+                {
+                    "width": 600,
+                    "height": 80,
+                    "transform": [{
+                        "filter": "if(State_selection == 'All', datum.State == 'All', datum.State == State_selection)"
+                    }],
+                    "mark": "rect",
+                    "encoding": {
+                        "x": {
+                            "field": "Date1",
+                            "timeUnit": "date",
+                            "type": "ordinal",
+                            "title": "Day",
+                            "axis": {
+                                "labelAngle": 0,
+                                "format": "%e"
+                            }
+                        },
+                        "y": {
+                            "field": "Date1",
+                            "timeUnit": "month",
+                            "type": "ordinal",
+                            "title": "Month"
+                        },
+                        "color": {
+                            "field": "Total Cases",
+                            "aggregate": "max",
+                            "type": "quantitative",
+                            "legend": {
+                                "title": null
+                            },
+                            "scale": {
+                                "range": [
+                                    "#f2bbc8", "#ba163d" 
+                                ]
+                            }
+                        },
+                        "tooltip": [
+                            {"field": "Date", "type":"ordinal"},
+                            {"field": "Total Cases"}
+                        ]
+                    },
+                    "title": "Daily Cases by State"
+                }
+            ]

@@ -1,69 +1,74 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 1000,
-    "height": 400,
-    "data": {
-      "url": "data/states-topo.json",
-      "format": {
-            "type": "topojson",
-            "feature": "layer1"
-          }
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 1100,
+  "height": 400,
+  "data": {
+      "url": "data/vax_state_cleaned.csv"
+  },
+  "params": [{
+    "name": "Vax_selection",
+    "bind": {
+      "input": "select",
+      "options": [
+        "Fully Vaccinated", "Partially Vaccinated"
+      ],
+      "labels": [
+        "Fully Vaccinated", "Partially Vaccinated"
+      ],
+      "name": "Status: "
     },
-    "params": [{
-      "name": "Vax_selection",
-      "bind": {
-        "input": "select",
-        "options": [
-          "Fully Vaccinated", "Partially Vaccinated"
-        ],
-        "labels": [
-          "Fully Vaccinated", "Partially Vaccinated"
-        ],
-        "name": "Status: "
-      },
-      "value": "Fully Vaccinated"
-      }
-    ],
-    "transform": [
-      {
-        "lookup": "properties.Name",
-        "from": {
-          "data": {
-            "url": "data/vax_state_cleaned.csv"
-          },
-          "key": "State",
-          "fields": ["% of Population", "Status", "Date", "StatusID"]
-        }
-      }
-    ],
-    "projection": {
-      "type": "equirectangular"
-    },
-    "mark": {
-      "type": "geoshape",
-      "stroke": "grey"
-      },
-    "encoding": {
-      "color": {
-        "field": "% of Population",
-        "type": "quantitative",
-        "scale": {"type": "log", "range": ["#cbffc7", "#087500"]}
-      },
-      "tooltip": [
-        {"field": "properties.Name", "type": "nominal", "title": "State"},       
-        {"field": "State", "type": "nominal"},
-        {"field": "% of Population", "type": "quantitative", "title": "% Vaccinated"}      ]
-    },
-    "config": {
-      "background": "#a8c0ce",
-      "view": {
-        "strokeOpacity": 0,
-        "stroke": "black"
-      },
-      "legend": {
-        "orient": "bottom-right"
-      }
+    "value": "Fully Vaccinated"
     }
-  
+  ],
+  "transform": [
+    {
+      "lookup": "State",
+      "from": {
+        "data": {
+          "url": "data/states-topo.json",
+          "format": {
+                "type": "topojson",
+                "feature": "layer1"
+            }
+        },
+        "key": "properties.Name"
+      },
+      "as": "geo"
+    },
+    {
+        "filter": "datum.Status == Vax_selection"
+    }
+  ],
+  "projection": {
+    "type": "equirectangular"
+  },
+  "mark": {
+    "type": "geoshape",
+    "stroke": "grey"
+    },
+  "encoding": {
+      "shape": {
+          "field": "geo",
+          "type": "geojson"
+          },
+      "color": {
+          "field": "% of Population",
+          "type": "quantitative",
+          "scale": {"type": "log", "range": ["#cbffc7", "#087500"]}
+      },
+      "tooltip": [       
+          {"field": "State", "type": "nominal"},
+          {"field": "% of Population", "type": "quantitative", "title": "% Vaccinated"}      ]
+  },
+  "config": {
+    "background": "#a8c0ce",
+    "view": {
+      "strokeOpacity": 0,
+      "stroke": "black"
+    },
+    "legend": {
+      "orient": "bottom-right"
+    }
   }
-  
+
+}

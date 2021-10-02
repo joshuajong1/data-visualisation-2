@@ -50,22 +50,13 @@ h1 {
 }
 
 .pure-u-3-5 {
-  margin-left: 5%;
-  padding-bottom: 2%;
-}
-
-.pure-u-1-2 {
-  margin-right: 0%;
-  /*border-style: solid;*/
+  margin-left: 0%;
+  padding-bottom: 0%;
 }
 
 .pure-u-2-5 {
   margin-right: 0%;
   /*border-style: solid;*/
-}
-
-#text_div {
-  margin-left: 2%;
 }
 
 #bump_chart {
@@ -90,7 +81,7 @@ h1 {
 #vaccine-text {
   margin-top: 5%;
   font-size: 30px;
-  color: teal;
+  color: #156fa3;
   font-weight: bold;
   padding-right: 0%;
 }

@@ -44,7 +44,7 @@
           "type": "formula",
           "as": "c",
           "initonly": true,
-          "expr": "if(datum.key==='% Fully Vaccinated','#CC3E78',if(datum.key==='% Partially Vaccinated','#01574d','red'))"
+          "expr": "if(datum.key==='% Fully Vaccinated','#CC3E78',if(datum.key==='% Partially Vaccinated','#008B8E','red'))"
       }, {
             "type": "stack",
             "groupby": ["ID"],
@@ -89,6 +89,27 @@
             "outerRadius": { "scale": "IDbands", "field": "ID", "offset": { "scale": "IDbands", "band": 1 } },
             "cornerRadius": {"signal": "cornerRadius"},
             "tooltip": { "signal": "datum.key+':  '+datum.value+'%'" }
+          }
+        }
+      },
+      {
+        "type": "text",
+        "encode": {
+          "enter": {
+            "fill": {"value": "#156fa3"},
+            "text": {
+              "value": ["32.6% more of the population", 
+              "need to be covered to achieve",
+              "herd immunity (80%)", "",
+              "Herd immunity would allow", 
+              "Malaysians to slowly transition",
+              "back to pre-pandemic times."
+            ]
+            },
+            "fontSize": {"value": 15},
+            "x": {"value": -80},
+            "y": {"value": 50},
+            "fontWeight": {"value": "bold"}
           }
         }
       }

@@ -51,7 +51,12 @@
             }
         },
         "color": {
-            "field": "ISO Country Code"
+            "field": "ISO Country Code",
+            "scale": {
+                "range": ["#002fdb", "#b279a2", "#2ebac7", "#e65656", "#db00d0", "#9e745c",
+                "#b30059", "#53a14b", "#5700b3", "#edc941"
+                ]
+            }
         },
         "tooltip": [
             {"field": "Date"},
@@ -84,5 +89,5 @@
         }
     },
     "width": 550,
-    "height": 350
+    "height": 400
 }

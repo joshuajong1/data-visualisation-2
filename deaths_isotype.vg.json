@@ -1,36 +1,39 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 400,
+    "width": 800,
     "height": 100,
     "title": "Deaths per Million in Malaysia from June 2021 to August 2021",
     "config": {
         "view": {
             "strokeWidth": 0,
-            "step": 15
+            "step": 10
         },
         "axis": {
-            "domain": false
+            "domain": false,
+            "labelFontSize": 14,
+            "titleFontSize": 14
         },
         "background": "#a8c0ce",
         "mark": {
             "stroke": "darkgrey"
         },
         "title": {
-            "fontSize": 17,
+            "fontSize": 20,
             "dx": 0,
             "color": "#156fa3"
         },
         "headerRow": {
-            "labelFontSize": 15,
+            "labelFontSize": 20,
             "labelAngle": 360,
             "labelAlign": "left",
-            "labelColor": "#156fa3"
+            "labelColor": "#156fa3",
+            "titleFontSize": 14
         }
     },
     "data": {
       "url": "data/deaths_per_million.csv"
     },
-    "mark": {"type": "point", "filled": true},
+    "concat": [{"mark": {"type": "point", "filled": true}, "width": 350, "height": 100,
     "encoding": {
       "x": {"field": "Deaths per million", "type": "ordinal", "axis": null},
       "y": {"field": "Species", "type": "ordinal", "axis": null},
@@ -38,7 +41,7 @@
           "field": "Month", 
           "header": {"title": ""},
           "sort": ["June", "July", "August"]
-        },
+      },
       "shape": {
         "field": "Species",
         "type": "nominal",
@@ -62,9 +65,32 @@
         }
       },
       "opacity": {"value": 1},
-      "size": {"value": 100},
+      "size": {"value": 200},
       "tooltip": {"field": "Species"}
+    }},
+    {
+      "mark": {
+        "type": "text", 
+        "align":"left", 
+        "size": 15,
+        "stroke": "#156fa38f",
+        "fill": "#156fa38f",
+        "fontWeight": "lighter"
+      },
+      "height": 100, "width": 10,
+      "encoding": {
+        "text": {
+          "value": ["The number of deaths per million", 
+                    "have been steadily increasing in the past",
+                    "three months. This is not surprising",
+                    "as vaccines take time to become effective.", 
+                    "The effects of the vaccines would only be felt", 
+                    "in the later months."]
+        }
+      }
     }
-  }
+  ]
+}
+  
   
   

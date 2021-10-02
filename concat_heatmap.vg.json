@@ -36,7 +36,11 @@
             "step": 15
         },
         "axis": {
-            "domain": false
+            "domain": false,
+            "labelColor": "#156fa3",
+            "titleColor": "#156fa3",
+            "labelFontSize": 14,
+            "titleFontSize": 14
         },
         "background": "#a8c0ce",
         "mark": {
@@ -44,13 +48,19 @@
         },
         "title": {
             "color": "#156fa3",
-            "fontSize": 20
+            "fontSize": 17
+        },
+        "legend": {
+            "titleColor": "#156fa3",
+            "labelColor": "#156fa3",
+            "labelFontSize": 14,
+            "titleFontSize": 14
         }
     },
     "vconcat": [
         {
-            "width": 600,
-            "height": 80,
+            "width": 550,
+            "height": 100,
             "transform": [{
                 "filter": "datum.State == State_selection"
             }],
@@ -77,7 +87,7 @@
                     "aggregate": "max",
                     "type": "quantitative",
                     "legend": {
-                        "title": "% of Usage"
+                        "title": "%"
                     },
                     "scale": {
                         "range": [
@@ -95,8 +105,8 @@
         {
             "vconcat": [
                 {
-                    "width": 600,
-                    "height": 80,
+                    "width": 550,
+                    "height": 100,
                     "transform": [{
                         "filter": "if(State_selection == 'All', datum.State == 'All', datum.State == State_selection)"
                     }],
@@ -137,54 +147,6 @@
                         ]
                     },
                     "title": "Ventilation Usage by State"
-                }
-            ]
-        },
-        {
-            "vconcat": [
-                {
-                    "width": 600,
-                    "height": 80,
-                    "transform": [{
-                        "filter": "if(State_selection == 'All', datum.State == 'All', datum.State == State_selection)"
-                    }],
-                    "mark": "rect",
-                    "encoding": {
-                        "x": {
-                            "field": "Date1",
-                            "timeUnit": "date",
-                            "type": "ordinal",
-                            "title": "Day",
-                            "axis": {
-                                "labelAngle": 0,
-                                "format": "%e"
-                            }
-                        },
-                        "y": {
-                            "field": "Date1",
-                            "timeUnit": "month",
-                            "type": "ordinal",
-                            "title": "Month"
-                        },
-                        "color": {
-                            "field": "Total Cases",
-                            "aggregate": "max",
-                            "type": "quantitative",
-                            "legend": {
-                                "title": null
-                            },
-                            "scale": {
-                                "range": [
-                                    "#f2bbc8", "#ba163d" 
-                                ]
-                            }
-                        },
-                        "tooltip": [
-                            {"field": "Date", "type":"ordinal"},
-                            {"field": "Total Cases"}
-                        ]
-                    },
-                    "title": "Daily Cases by State"
                 }
             ]
         }
