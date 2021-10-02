@@ -73,7 +73,7 @@
         "type": "text", 
         "align":"left", 
         "size": 15,
-        "stroke": "#156fa38f",
+        "stroke": null,
         "fill": "#156fa38f",
         "fontWeight": "lighter"
       },
