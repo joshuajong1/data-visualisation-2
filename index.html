@@ -26,8 +26,8 @@
 
 <body>
     <center>
-        <h1 style="color:#156fa3">A look into the Covid-19 Pandemic in Malaysia</h1>
-        <p style="text-align: center"><i><b>A visualisation by Joshua Jong</b></i></p>
+        <h1 style="color:#156fa3; font-size: 50px">A look into the Covid-19 Pandemic in Malaysia</h1>
+        <p style="text-align: center"><i>A visualisation by Joshua Jong (31190863)</i></p>
         <br>
         <br>
     </center>
@@ -35,7 +35,7 @@
 
     <div class="pure-g">
         <div class="pure-u-1">
-          <h1 style="margin-left: 0%; margin-right: 0%; color: #156fa3; text-align:center">
+          <h1 style="margin-left: 0%; margin-top: 5%; color: #156fa3; text-align:center">
            How is Malaysia's vaccination program doing?
           </h1>
         </div>
@@ -56,14 +56,14 @@
             </p>
         </div>
 
-        <div class="pure-u-1-5"">
-            <p style="padding-top:20%;margin-left: 30%; color: #156fa3; font-weight: bold; font-size:15px">
+        <div class="pure-u-1-5">
+            <p style="padding-top:20%;margin-left: 30%; color: #468cb4; font-size:17px">
                 In general, the west coast states and Sarawak seem to have made better
-                progress in vaccinating its residents, surpassing <b>50%</b> inoculation
+                progress in vaccinating its residents, surpassing <b style="color: #156fa3; font-size: 25px">50%</b> inoculation
                 rate in both administering one and two doses. <br><br>
                 Both Sabah and Kelantan seem to
                 progress similarly. However, they appear
-                to be the most behind in administering both one (<b>41%</b>) and two doses (<b>29%</b>).
+                to be the most behind in administering both one (<b style="color: #156fa3; font-size: 25px">41%</b>) and two doses (<b style="color: #156fa3; font-size: 25px">29%</b>).
             </p>
         </div>
 
@@ -74,12 +74,13 @@
         <div class="pure-u-1" style= "margin-top: 5%;">
             <p style="margin-left: 5%; font-weight:bold; font-size:20px;">
                 % of Total Population <span style="color:#CC3E78;">Fully Vaccinated</span>
-                and <span style="color:#008B8E;">Partially Vaccinated</span>
+                and <span style="color:#008B8E;">Partially Vaccinated</span><br>
+                <span style="padding-left: 13%">as of 31 August 2021</span>
             </p>
         </div>
 
         <div class="pure-u-1-4" style="margin-left: 12%; margin-right:4%">
-          <div id="radial_plot" style="margin-left: 0%; padding-top: 15%;"></div>
+          <div id="radial_plot" style="margin-left: 0%; padding-top: 10%;"></div>
         </div>
 
 
@@ -138,16 +139,16 @@
         </div>
 
         <div class="pure-u-2-5">
-            <div id="sankey_basic" style="width: 1000px; height: 400px; margin-left: 15%; margin-top: 9%;"></div>
+            <div id="sankey_basic" style="width: 1000px; height: 400px; margin-left: 15%; margin-top: 5%;"></div>
         </div>
         
         
     
         <div class="pure-u-1-2">
-            <div id="bump_chart" style="margin-left: 7%; margin-top:3%"></div>
+            <div id="bump_chart" style="margin-left: 7%; margin-top:0%"></div>
         </div>
 
-        <div class="pure-u-2-5" style="margin-left:3%; margin-top: 2%">
+        <div class="pure-u-2-5" style="margin-left:3%; margin-top: 3%">
           <p style="margin-right: 0%; font-size: 20px; margin-left: 5%;">
             Malaysia's vaccination rate picked up speed starting in June. In the figure on the left, it can
             be seen that Malaysia was in <b style="font-size: 30px">10th place</b> out of 10 countries in terms of doses administered per 100 people.
@@ -191,9 +192,12 @@
             <p style="font-size: 20px">
                 A major reason as to why governments around the world were quick to initiate 
                 nationwide lockdowns is to ensure the stability of their healthcare systems. 
-                Those severely infected with Covid-19 are at risk of being warded in intensive 
-                care units (ICUs) and may require ventilation if their conditions deteriorate
-                rapidly. Death may even be a probable.
+                Those severely infected with Covid-19 are at risk of being warded in 
+                <b style="color: rgb(163, 143, 28); font-size: 30px">intensive 
+                    care units (ICUs)</b> and may require 
+                    <b style="color: rgb(143, 26, 137); font-size: 30px">ventilation</b>
+                     if their conditions deteriorate
+                rapidly. <b style="font-size: 30px; color: black">Death</b> may even be a probable.
                 Thus, lockdowns were declared everywhere to reduce the potential burden
                 on the healthcare system. 
                 <br><br>
@@ -224,15 +228,17 @@
             <p style="font-size: 20px">
                 Following an exposure to a Covid-19 infected person, the only way one is able
                 to determine whether they have been infected is through testing. Before self-test kits
-                were available, Malaysia has been using two types of tests – Rapid Test Kit - Antigen (RTK-AG)
-                and Polymerase Chain Reaction (PCR).
+                were available, Malaysia has been using two types of tests – 
+                <b style="color: #ca5050; font-size: 25px">Rapid Test Kit - Antigen (RTK-AG)</b>
+                and <b style="color: #ca5050; font-size: 25px">Polymerase Chain Reaction (PCR)</b>.
                 <br><br>
                 One method to determine how transmissible Covid-19 is in the society is to compare
-                the number of tests done with the number of cases reported. A large number 
+                the <b style="font-size:30px">number of tests</b> done with the <b style="font-size:30px">number of cases</b> reported. A large number 
                 of tests conducted coupled with a low number of positive cases would signal the low
                 transmissible rate in the society.
                 <br><br>
-                Let us see how Malaysia's testing is. Are we testing enough?
+                Let us see how Malaysia's average testing is compared to the positive cases.
+                Click on a state to find out!
             </p>
         </div>
     
@@ -279,11 +285,11 @@
                     sankey: { 
                         link: { 
                             color: { 
-                                fill: "lightgrey"
+                                fill: "white"
                             }
                         },
                         node: { 
-                            colors: '#b81d94',
+                            colors: ['#008aff', '#b50000', '#ff008a', '#00bcae', '#ff6600', '#c102b5', '#ffff94'],
                             label: { 
                                 color: '#4f62c4',
                                 fontSize: 20

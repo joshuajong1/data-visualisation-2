@@ -96,7 +96,7 @@
         "type": "text",
         "encode": {
           "enter": {
-            "fill": {"value": "#156fa3"},
+            "fill": {"value": "#2c7493"},
             "text": {
               "value": ["32.6% more of the population", 
               "need to be covered to achieve",
@@ -106,10 +106,9 @@
               "back to pre-pandemic times."
             ]
             },
-            "fontSize": {"value": 15},
+            "fontSize": {"value": 17},
             "x": {"value": -80},
-            "y": {"value": 50},
-            "fontWeight": {"value": "bold"}
+            "y": {"value": 50}
           }
         }
       }

@@ -4,7 +4,8 @@
         "text": "Doses per 100 People in Selected Countries",
         "color": "#156fa3",
         "fontSize": 20,
-        "font": "Arial"
+        "font": "Arial",
+        "offset": 30
     },
     "data": {
         "url": "data/10-countries-vaccine-per-capita.csv"
