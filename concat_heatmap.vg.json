@@ -74,7 +74,8 @@
                     "title": "Day",
                     "axis": {
                         "labelAngle": 0,
-                        "format": "%e"
+                        "format": "%e",
+                        "labelFontSize": 12
                     }
                 },
                 "y": {
@@ -120,7 +121,8 @@
                             "title": "Day",
                             "axis": {
                                 "labelAngle": 0,
-                                "format": "%e"
+                                "format": "%e",
+                                "labelFontSize": 12
                             }
                         },
                         "y": {
