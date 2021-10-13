@@ -40,7 +40,7 @@
     }
   ],
   "projection": {
-    "type": "equirectangular"
+    "type": "equalEarth"
   },
   "mark": {
     "type": "geoshape",
@@ -50,7 +50,7 @@
       "shape": {
           "field": "geo",
           "type": "geojson"
-          },
+      },
       "color": {
           "field": "% of Population",
           "type": "quantitative",
