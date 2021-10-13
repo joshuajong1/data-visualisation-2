@@ -5,6 +5,10 @@
   scroll-behavior: smooth;
 }
 
+img:hover {
+  opacity: 0.7;
+}
+
 #counter {
   margin-left: 30px;
 }
